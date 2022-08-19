@@ -84,7 +84,7 @@ local mediaplayer = "mpv"
 awful.util.terminal = terminal
 -- awful.util.tagnames = {"", "", "", "", "", "", "", "", ""}
 awful.util.tagnames = {}
-local names = {"", "", "", "", "", "", "", "", ""}
+local names = {"", "", "", "", "", "", "", "", ""}
 local l = awful.layout.suit  -- Just to save some typing: use an alias.
 local layouts = { l.tile, l.max, l.max, l.tile, l.max,
     l.max, l.max, l.max, l.max }
@@ -101,6 +101,7 @@ awful.layout.layouts = {
     -- awful.layout.suit.tile.top,
     --
     awful.layout.suit.max,
+    -- awful.layout.suit.corner.nw,
     --
     -- awful.layout.suit.max.fullscreen,
 }
@@ -201,7 +202,7 @@ globalkeys = my_table.join(
     -- Awesome keybindings
     awful.key({ modkey,         }, "Return", function () awful.spawn( terminal ) end,
               {description = "Launch terminal", group = "awesome"}),
-    awful.key({ modkey,         }, "g", function () awful.spawn( "google-chrome-stable --enable-features=VaapiVideoDecoder,VaapiVideoEncoder --disable-features=UseChromeOSDirectVideoDecoder --gtk-version=4" ) end,
+    awful.key({ modkey,         }, "g", function () awful.spawn( "google-chrome-stable" ) end,
               {description = "Launch qutebrowser", group = "awesome"}),
     awful.key({ modkey, "Shift" }, "r", awesome.restart,
               {description = "Reload awesome", group = "awesome"}),
@@ -244,7 +245,7 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "n", function () awful.spawn.with_shell(terminal .. " -t ranger -e ranger") end,
       {description = "Open Ranger File Manager", group = "hotkeys"}),
 
-    awful.key({ ctrlkey, altkey }, "l", function () awful.spawn.with_shell("slock") end,
+    awful.key({ ctrlkey, altkey }, "l", function () awful.spawn.with_shell("gnome-screensaver-command -l") end,
       {description = "Lock the screen", group = "hotkeys"}),
 
     awful.key({ modkey }, "F8", function () awful.spawn.with_shell("playerctl previous") end,
@@ -510,6 +511,10 @@ clientbuttons = gears.table.join(
     awful.button({ modkey }, 3, function (c)
         c:emit_signal("request::activate", "mouse_click", {raise = true})
         awful.mouse.client.resize(c)
+    end),
+    awful.button({ modkey, ctrlkey }, 1, function (c)
+        c:emit_signal("request::activate", "mouse_click", {raise = true})
+        awful.mouse.client.resize(c)
     end)
 )
 
@@ -548,6 +553,9 @@ awful.rules.rules = {
     { rule_any = { class = { "Steam" } },
       properties = { tag = screen[1].tags[5] } },
 
+    { rule_any = { name = { "Steam" } },
+      properties = { tag = screen[1].tags[5] } },
+
     { rule = { name = "tmux" },
       properties = { tag = screen[1].tags[6] } },
 
@@ -570,6 +578,8 @@ awful.rules.rules = {
     { rule = { class = "Xfce4-settings-manager" },
           properties = { floating = false } },
 
+    { rule = { class = "Onboard" },
+          properties = { focusable = false } },
 
 
     -- Floating clients.
@@ -597,6 +607,9 @@ awful.rules.rules = {
           "Wpa_gui",
           "pinentry",
           "veromix",
+          "Xfce4-appfinder",
+          "Steam",
+          "Onboard",
           "qutebrowser",
           "xtightvncviewer"},
 

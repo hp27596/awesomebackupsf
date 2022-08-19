@@ -13,7 +13,7 @@ watchlist:
   # - ^NDX
   - AMC
   - BTC-USD
-  # - BBBY
+  - BBBY
 lots:
   - symbol: "GME"
     quantity: 1288

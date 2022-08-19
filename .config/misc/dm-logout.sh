@@ -6,7 +6,7 @@
 # - dmenu
 # - systemd
 
-chosen=$(echo -e "0. Screen Off\n1. Logout\n2. Shutdown\n3. Reboot\n4. Suspend\n5. Lockscreen" | dmenu -i -l 10 -p "Choose Action:")
+chosen=$(echo -e "0. Screen Off\n1. Logout\n2. Shutdown\n3. Reboot\n4. Suspend\n5. Lockscreen\n6. Hibernate" | dmenu -i -l 10 -p "Choose Action:")
 if [[ $chosen = "0. Screen Off" ]]; then
 	xset dpms force off
 elif [[ $chosen = "4. Suspend" ]]; then
@@ -24,5 +24,7 @@ elif [[ $chosen = "2. Shutdown" ]]; then
 elif [[ $chosen = "3. Reboot" ]]; then
 	systemctl reboot
 elif [[ $chosen = "5. Lockscreen" ]]; then
-	slock
+	gnome-screensaver-command -l
+elif [[ $chosen = "6. Hibernate" ]]; then
+	systemctl hibernate
 fi

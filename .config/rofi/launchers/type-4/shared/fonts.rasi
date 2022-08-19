@@ -5,9 +5,9 @@
  * 
  * Fonts
  *
-*    font: "Iosevka Nerd Font 22";
+*    font: "Iosevka Nerd Font 18";
  **/
 
 * {
-    font: "Source Code Pro 22";
+    font: "Source Code Pro 18";
 }

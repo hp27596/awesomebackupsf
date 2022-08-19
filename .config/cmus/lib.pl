@@ -181,11 +181,14 @@
 /home/hp/Music/FLACs/Billie Bossa Nova - Billie Eilish.flac
 /home/hp/Music/FLACs/Oxytocin - Billie Eilish.flac
 /home/hp/Music/FLACs/Halley_s Comet - Billie Eilish.flac
+/home/hp/Music/FLACs/Overheated - Billie Eilish.flac
 /home/hp/Music/FLACs/Happier Than Ever - Billie Eilish.flac
+/home/hp/Music/FLACs/My Future - Billie Eilish.flac
 /home/hp/Music/FLACs/NDA - Billie Eilish.flac
 /home/hp/Music/FLACs/When The Party_s Over - Billie Eilish.flac
 /home/hp/Music/FLACs/Bad Guy - Billie Eilish.flac
 /home/hp/Music/FLACs/all the good girls go to hell - Billie E.flac
+/home/hp/Music/FLACs/my strange addiction - Billie Eilish.flac
 /home/hp/Music/FLACs/ilomilo - Billie Eilish.flac
 /home/hp/Music/FLACs/02.-Everything I Wanted.flac
 /home/hp/Music/FLACs/14.-Idontwannabeyouanymore.flac
@@ -239,6 +242,7 @@
 /home/hp/Music/FLACs/The Little Things Give You Away_ - Linki.flac
 /home/hp/Music/FLACs/Bleed It Out - Linkin Park.flac
 /home/hp/Music/FLACs/New Divide - Linkin Park.flac
+/home/hp/Music/FLACs/Papercut - Linkin Park.flac
 /home/hp/Music/New Divine - Linkin Park.mp3
 /home/hp/Music/In The End - Linkin Park [NCT 32633888900113662500].mp3
 /home/hp/Music/The Catalyst - Linkin Park [NCT 20634165389887656250].mp3

@@ -35,6 +35,7 @@ theme.tasklist_fg_focus                         = "#4CB7DB"
 theme.menu_height                               = dpi(20)
 theme.menu_width                                = dpi(160)
 theme.menu_icon_size                            = dpi(32)
+theme.cross = theme.icon_dir .. "/close.svg"
 theme.awesome_icon                              = theme.icon_dir .. "/awesome_icon_white.png"
 theme.awesome_icon_launcher                     = theme.icon_dir .. "/awesome_icon.png"
 theme.taglist_squares_sel                       = theme.icon_dir .. "/square_sel.png"
@@ -257,7 +258,7 @@ local bat = lain.widget.bat({
 
 -- Wireless Widget
 local net_widgets = require("net_widgets")
-net_wireless = net_widgets.wireless({interface = "wlan0",
+net_wireless = net_widgets.wireless({interface = "wlp1s0",
                                      onclick = "alacritty -e /home/hp/.config/misc/nmtui.sh"})
 
 -- Coretemp
@@ -277,11 +278,27 @@ local weather = awful.widget.watch([[ bash -c '~/.config/awesome/wttr.sh']], 300
 
 -- Launcher
 local mylauncher = awful.widget.button({ image = theme.awesome_icon_launcher })
-mylauncher:connect_signal("button::press", function() awful.util.mymainmenu:toggle() end )
+mylauncher:connect_signal("button::press", function() awful.spawn.with_shell('xfce4-appfinder') end )
+-- mylauncher:connect_signal("button::press", function() awful.util.mymainmenu:toggle() end )
+
+-- Kill button
+local killbutton = awful.widget.button({ image = theme.cross })
+killbutton:connect_signal("button::press", function() client.focus:kill() end )
+killbutton = wibox.container.margin(killbutton, dpi(6), dpi(6), dpi(6), dpi(6))
 
 -- Caffeinate
-caffeine_widget, caffeine_timer = awful.widget.watch([[ bash -c '~/.config/awesome/caffe_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 13", stdout)) end )
+caffeine_widget, caffeine_timer = awful.widget.watch([[ bash -c '~/.config/awesome/caffe_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 20", stdout)) end )
 caffeine_widget:connect_signal("button::press", function() awful.spawn.with_shell('~/.config/awesome/caffe_toggle.sh') end )
+
+-- rot8
+rot_widget, rot_timer = awful.widget.watch([[ bash -c '~/.config/awesome/rot_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 22", stdout)) end )
+rot_widget:connect_signal("button::press", function() awful.spawn.with_shell('~/.config/awesome/rot_toggle.sh') end )
+rot_widgetcont = wibox.container.margin(rot_widget, dpi(8), dpi(0), dpi(-5), dpi(-12))
+
+-- onboard
+local onboard = wibox.widget.textbox('')
+onboard:connect_signal("button::press", function() awful.spawn.with_shell('onboard') end )
+onboard = wibox.container.margin(onboard, dpi(8), dpi(0), dpi(6), dpi(2))
 
 -- Separators
 local first = wibox.widget.textbox('<span font="Roboto 7"> </span>')
@@ -331,29 +348,31 @@ function theme.at_screen_connect(s)
         filter = awful.widget.taglist.filter.all,
         buttons = awful.util.taglist_buttons,
         layout = {
-			spacing = 25,
-			layout  = wibox.layout.fixed.vertical
+            spacing = 25,
+            layout  = wibox.layout.fixed.vertical
         },
         style = {
             -- shape = gears.shape.powerline,
             bg_focus = barcolor,
-            font = 7,
+            font = 9,
             spacing = 25,
         },
     }
 
     mytaglistcont = wibox.container.background(s.mytaglist, theme.bg_focus, gears.shape.rectangle)
-    s.mytag = wibox.container.margin(mytaglistcont, dpi(1), dpi(0), dpi(2), dpi(0))
+    s.mytag = wibox.container.margin(mytaglistcont, dpi(3), dpi(0), dpi(2), dpi(0))
 
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons, { bg_focus = theme.bg_focus, shape = gears.shape.rectangle, shape_border_width = 5, shape_border_color = theme.tasklist_bg_normal, align = "center" })
 
-    -- Create the wibox
-    s.mywibox = awful.wibar({ position = "left", screen = s , width = dpi(20) })
+    -- Create the left wibox
+    s.mywibox = awful.wibar({ position = "left", screen = s , width = dpi(28) })
 
     -- Create systray
     s.systray = wibox.widget.systray()
     s.systray:set_horizontal(false)
+    s.systray:set_base_size(35)
+    s.systraycont = wibox.container.margin(s.systray, dpi(4), dpi(0), dpi(2), dpi(0))
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -365,13 +384,15 @@ function theme.at_screen_connect(s)
         nil, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.vertical,
-            s.systray,
+            s.systraycont,
+            onboard,
+            rot_widgetcont,
             s.mylayoutbox,
         },
     }
 
     -- Create the top wibox
-    s.mytopwibox = awful.wibar({ position = "top", screen = s, border_width = dpi(0), height = dpi(20) })
+    s.mytopwibox = awful.wibar({ position = "top", screen = s, border_width = dpi(0), height = dpi(28) })
 
     -- Add widgets to the top wibox
     s.mytopwibox:setup {
@@ -383,7 +404,7 @@ function theme.at_screen_connect(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            spr_bottom_right,
+            killbutton,
             bottom_bar,
             temp,
             bottom_bar,
@@ -397,14 +418,12 @@ function theme.at_screen_connect(s)
             bottom_bar,
             calendar_icon,
             calendarwidget,
-            bottom_bar,
             clock_icon,
-            bottom_bar,
             clockwidget,
             bottom_bar,
-            caffeine_widget,
-            bottom_bar,
             weather,
+            bottom_bar,
+            caffeine_widget,
             bottom_bar,
         },
     }
