@@ -18,7 +18,7 @@ local theme                                     = {}
 theme.default_dir                               = require("awful.util").get_themes_dir() .. "default"
 theme.icon_dir                                  = os.getenv("HOME") .. "/.config/awesome/themes/holo/icons"
 theme.wallpaper                                 = os.getenv("HOME") .. "/.config/awesome/1099421.png"
-theme.font                                      = "Ubuntu Mono 10"
+theme.font                                      = "Ubuntu Mono 9"
 theme.taglist_font                              = "Ubuntu Mono 9"
 theme.fg_normal                                 = "#FFFFFF"
 theme.fg_focus                                  = "#0099CC"
@@ -34,7 +34,7 @@ theme.tasklist_bg_normal                        = "#222222"
 theme.tasklist_fg_focus                         = "#4CB7DB"
 theme.menu_height                               = dpi(20)
 theme.menu_width                                = dpi(160)
-theme.menu_icon_size                            = dpi(32)
+theme.menu_icon_size                            = dpi(36)
 theme.cross = theme.icon_dir .. "/close.svg"
 theme.awesome_icon                              = theme.icon_dir .. "/awesome_icon_white.png"
 theme.awesome_icon_launcher                     = theme.icon_dir .. "/awesome_icon.png"
@@ -278,7 +278,8 @@ local weather = awful.widget.watch([[ bash -c '~/.config/awesome/wttr.sh']], 300
 
 -- Launcher
 local mylauncher = awful.widget.button({ image = theme.awesome_icon_launcher })
-mylauncher:connect_signal("button::press", function() awful.spawn.with_shell('xfce4-appfinder') end )
+mylauncher:connect_signal("button::press", function() awful.spawn.with_shell('panther_launcher') end )
+-- mylauncher:connect_signal("button::press", function() awful.spawn.with_shell('xfce4-appfinder') end )
 -- mylauncher:connect_signal("button::press", function() awful.util.mymainmenu:toggle() end )
 
 -- Kill button
@@ -296,9 +297,9 @@ rot_widget:connect_signal("button::press", function() awful.spawn.with_shell('~/
 rot_widgetcont = wibox.container.margin(rot_widget, dpi(8), dpi(0), dpi(-5), dpi(-12))
 
 -- onboard
-local onboard = wibox.widget.textbox('')
-onboard:connect_signal("button::press", function() awful.spawn.with_shell('onboard') end )
-onboard = wibox.container.margin(onboard, dpi(8), dpi(0), dpi(6), dpi(2))
+-- local onboard = wibox.widget.textbox('')
+-- onboard:connect_signal("button::press", function() awful.spawn.with_shell('onboard') end )
+-- onboard = wibox.container.margin(onboard, dpi(8), dpi(0), dpi(6), dpi(2))
 
 -- Separators
 local first = wibox.widget.textbox('<span font="Roboto 7"> </span>')
@@ -385,7 +386,7 @@ function theme.at_screen_connect(s)
         { -- Right widgets
             layout = wibox.layout.fixed.vertical,
             s.systraycont,
-            onboard,
+            -- onboard,
             rot_widgetcont,
             s.mylayoutbox,
         },
