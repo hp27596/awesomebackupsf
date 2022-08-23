@@ -216,6 +216,8 @@ local bat = lain.widget.bat({
         widget:set_markup(markup.font("Roboto 8", bat_header) .. bat_p)
     end
 })
+bat = wibox.container.background(bat.widget, theme.bg_focus, gears.shape.rectangle)
+
 
 -- ALSA volume bar
 -- theme.volume = lain.widget.alsabar({
@@ -260,21 +262,34 @@ local bat = lain.widget.bat({
 local net_widgets = require("net_widgets")
 net_wireless = net_widgets.wireless({interface = "wlp1s0",
                                      onclick = "alacritty -e /home/hp/.config/misc/nmtui.sh"})
+net_wireless = wibox.container.background(net_wireless, theme.bg_focus, gears.shape.rectangle)
+
 
 -- Coretemp
 local tempicon = wibox.widget.imagebox(theme.widget_temp)
--- local tempfile = "/sys/devices/virtual/thermal/thermal_zone4/temp"
+-- local tempfile = "/sys/devices/virtual/thermal/thermal_zone8/temp"
 local temp = lain.widget.temp({
     settings = function()
         widget:set_markup(markup.fontfg(theme.taglist_font, "#FFFFFF", " " .. coretemp_now .. "°C "))
     end
 })
+temp = wibox.container.background(temp.widget, theme.bg_focus, gears.shape.rectangle)
+
 
 -- Volume
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume') { widget_type = 'icon_and_text' }
+volume_widget = wibox.container.background(volume_widget, theme.bg_focus, gears.shape.rectangle)
+
+-- Cmus
+-- local cmus_widget = require('awesome-wm-widgets.cmus-widget.cmus') { space = 5, timeout = 5 }
+local cmus_widget = awful.widget.watch([[ bash -c '~/.config/awesome/cmus.sh' ]], 5, function(widget, stdout)  widget:set_markup(markup.font("Ubuntu Mono 9", stdout)) end )
+cmus_widget = wibox.container.margin(cmus_widget, dpi(0), dpi(0), dpi(3.5), dpi(0))
+cmus_widget = wibox.container.background(cmus_widget, theme.bg_focus, gears.shape.rectangle)
 
 -- Weather
-local weather = awful.widget.watch([[ bash -c '~/.config/awesome/wttr.sh']], 300, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 9", stdout)) end )
+-- local weather = awful.widget.watch([[ bash -c '~/.config/awesome/wttr.sh']], 300, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 9", stdout)) end )
+
+
 
 -- Launcher
 local mylauncher = awful.widget.button({ image = theme.awesome_icon_launcher })
@@ -286,10 +301,12 @@ mylauncher:connect_signal("button::press", function() awful.spawn.with_shell('pa
 local killbutton = awful.widget.button({ image = theme.cross })
 killbutton:connect_signal("button::press", function() client.focus:kill() end )
 killbutton = wibox.container.margin(killbutton, dpi(6), dpi(6), dpi(6), dpi(6))
+killbutton = wibox.container.background(killbutton, theme.bg_focus, gears.shape.rectangle)
 
 -- Caffeinate
 caffeine_widget, caffeine_timer = awful.widget.watch([[ bash -c '~/.config/awesome/caffe_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 20", stdout)) end )
 caffeine_widget:connect_signal("button::press", function() awful.spawn.with_shell('~/.config/awesome/caffe_toggle.sh') end )
+caffeine_widget = wibox.container.background(caffeine_widget, theme.bg_focus, gears.shape.rectangle)
 
 -- rot8
 rot_widget, rot_timer = awful.widget.watch([[ bash -c '~/.config/awesome/rot_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 22", stdout)) end )
@@ -373,6 +390,7 @@ function theme.at_screen_connect(s)
     s.systray = wibox.widget.systray()
     s.systray:set_horizontal(false)
     s.systray:set_base_size(35)
+    s.systray = wibox.container.background(s.systray, theme.bg_normal, gears.shape.rectangle)
     s.systraycont = wibox.container.margin(s.systray, dpi(4), dpi(0), dpi(2), dpi(0))
 
     -- Add widgets to the wibox
@@ -422,7 +440,8 @@ function theme.at_screen_connect(s)
             clock_icon,
             clockwidget,
             bottom_bar,
-            weather,
+            -- weather,
+            cmus_widget,
             bottom_bar,
             caffeine_widget,
             bottom_bar,

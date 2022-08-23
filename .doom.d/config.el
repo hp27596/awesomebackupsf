@@ -2,6 +2,7 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
+(run-at-time (current-time) 300 'recentf-save-list)
 
 ;; Better syntax highlighting with tree sitter
 (use-package! tree-sitter

@@ -255,6 +255,8 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "F10", function () awful.spawn.with_shell("playerctl next") end,
       {description = "Play Next", group = "hotkeys"}),
 
+    awful.key({ }, "XF86AudioPlay", function () awful.spawn.with_shell("playerctl play-pause") end,
+      {description = "Play/Pause", group = "hotkeys"}),
 
     awful.key({ modkey }, "i", function () awful.spawn("clipmenu -i -l 15 -p 'Choose Clipboard:'") end,
         {description = "Clipboard manager", group = "hotkeys"}),
@@ -431,14 +433,14 @@ clientkeys = my_table.join(
                 awful.layout.set(awful.layout.suit.max)
             end
         end,
-        {description = "toggle between max and tile layout", group = "client"})
+        {description = "toggle between max and tile layout", group = "client"}),
 
-    -- awful.key({ modkey,           }, "m",
-    --     function (c)
-    --         c.maximized = not c.maximized
-    --         c:raise()
-    --     end ,
-    -- {description = "maximize", group = "client"})
+    awful.key({ modkey, "Shift" }, "m",
+        function (c)
+            c.maximized = not c.maximized
+            c:raise()
+        end ,
+    {description = "maximize", group = "client"})
 )
 
 -- Bind all key numbers to tags.
