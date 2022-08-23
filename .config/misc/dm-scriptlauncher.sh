@@ -14,7 +14,7 @@ declare -a options=(
     "Switch Audio Source - dm-switchaudio.sh"
     "General Info (Term) - timescript.sh"
     "Backup Awesome Dotfiles (Term) - awesomebu.sh"
-    "Backup Qtile Dotfiles (Term) - qtilebu.sh"
+    # "Backup Qtile Dotfiles (Term) - qtilebu.sh"
     "Open Password Manager - dm-passmenu.sh"
     "Open Clean Disk Utility (Term) - ncdu"
     "Refresh App Launcher Cache - dm-frecency-flush.sh"
