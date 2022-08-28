@@ -594,6 +594,7 @@ awful.rules.rules = {
           "Arandr",
           "Blueberry",
           "Galculator",
+          "Qalculate-gtk",
           "Gnome-font-viewer",
           "Gpick",
           "Imagewriter",

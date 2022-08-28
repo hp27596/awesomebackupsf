@@ -188,7 +188,6 @@
 /home/hp/Music/FLACs/When The Party_s Over - Billie Eilish.flac
 /home/hp/Music/FLACs/Bad Guy - Billie Eilish.flac
 /home/hp/Music/FLACs/all the good girls go to hell - Billie E.flac
-/home/hp/Music/FLACs/my strange addiction - Billie Eilish.flac
 /home/hp/Music/FLACs/ilomilo - Billie Eilish.flac
 /home/hp/Music/FLACs/02.-Everything I Wanted.flac
 /home/hp/Music/FLACs/14.-Idontwannabeyouanymore.flac
@@ -202,6 +201,7 @@
 /home/hp/Music/FLACs/Touch - Daft Punk_ Paul Williams.flac
 /home/hp/Music/Touch - Daft Punk_ Paul Williams.mp3
 /home/hp/Music/FLACs/Get Lucky - Daft Punk_ Pharrell Williams.flac
+/home/hp/Music/FLACs/Misirlou - Dick Dale_ His Del-Tones.flac
 /home/hp/Music/Minh Yeu Nhau Yeu Nhau Binh Ye... - Dinh Huong Ha Anh Tuan (NhacPro.net).mp3
 /home/hp/Music/FLACs/Freak - Doja Cat.flac
 /home/hp/Music/HotelCalifornia-Eagles_38w3_2.mp3
@@ -318,13 +318,17 @@
 /home/hp/Music/FLACs/12 - Stressed Out.flac
 /home/hp/Music/FLACs/02 - Don't Stop Me Now (Feat. Melinda Doolittle).flac
 /home/hp/Music/FLACs/13 - Nothing Else Matters (feat. Caroline Baran).flac
+/home/hp/Music/FLACs/Cheap Thrills - Sia.flac
 /home/hp/Music/Coming Home Pt II - Skylar Grey.mp3
 /home/hp/Music/FLACs/Coming Home Part II_ - Skylar Grey.flac
 /home/hp/Music/DiDeTroVe-SoobinHoangSon-4726882.mp3
 /home/hp/Music/WhereDoWeGo-ThanhBui-TataYoung_3xgkd_hq.mp3
+/home/hp/Music/FLACs/The House Of The Rising Sun - The Animal.flac
+/home/hp/Music/FLACs/Yesterday - The Beatles.flac
 /home/hp/Music/LetItBe-TheBeatles-37394.mp3
 /home/hp/Music/FLACs/Let It Be - The Beatles.flac
 /home/hp/Music/FLACs/Hotel California LIVE_ - The Eagles.flac
+/home/hp/Music/FLACs/I Can_t Get No_ Satisfaction - The Rolli.flac
 /home/hp/Music/FLACs/Seven Nation Army - The White Stripes.flac
 /home/hp/Music/FLACs/minh yeu nhau yeu nhau binh yen thoi - T.flac
 /home/hp/Music/Linh Hồn Vẫn Tồn Tại-UnlimiteD.mp3
