@@ -4,6 +4,10 @@
 
 # declare scripts description and location
 declare -a options=(
+    "Restart Emacs - resemacs.sh"
+    "Restart Nextcloud Daemon - restartnextcloud.sh"
+    "Cpu turbo toggle - dm-turbo.sh"
+    "Login Portal/Network Check - networkcheck.sh"
     "Kill Process - dm-killprocess.sh"
     "Misc Search (Synonym, etc) - dm-miscsearch.sh"
     "Word Autocompletion And Suggestion - dm-autocomplete.sh"
@@ -19,8 +23,6 @@ declare -a options=(
     "Open Clean Disk Utility (Term) - ncdu"
     "Refresh App Launcher Cache - dm-frecency-flush.sh"
     "Open Dotfiles Chooser - dm-opendot.sh"
-    "Login Portal/Network Check - networkcheck.sh"
-    "Restart Nextcloud Daemon - restartnextcloud.sh"
 )
 
 # script folder path

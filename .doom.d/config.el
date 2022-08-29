@@ -15,7 +15,7 @@
 ;; pico8
 (add-to-list 'load-path "~/.doom.d/pico8/")
 (require 'pico8-mode)
-;; (add-to-list 'auto-mode-alist '("\\.p8\\'" . lua-mode))
+(add-to-list 'auto-mode-alist '("\\.p8\\'" . pico8-mode))
 (add-hook 'pico8-mode-hook  (lambda () (setq evil-shift-width 1)(setq tab-width 1)(make-variable-buffer-local 'lua-indent-level)(set-variable 'lua-indent-level 1)))
 ;; (setq lua-indent-level 1)
 ;; (set-variable 'lua-indent-level 4)

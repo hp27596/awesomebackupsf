@@ -139,7 +139,7 @@ alias wlg='nohup wl-gammactl -g' #wayland extended brightness
 alias xrandrbr='xrandr --output eDP1 --brightness' #set extended brightness
 alias emacs="~/.config/misc/emacs-launch.sh"
 alias yt="yt-dlp"
-
+alias wifite='airmon-ng start wlp1s0 && sudo wifite'
 cdl() { cd "$@" && ls; }
 
 # uname -a

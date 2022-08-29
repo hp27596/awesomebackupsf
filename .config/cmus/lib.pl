@@ -165,6 +165,9 @@
 /home/hp/Music/PostmodernJukebox/[YT2mp3.info] - Who Wants to Live Forever - Queen (_'West Side Story_' Style Cover) ft. Morgan James (320kbps).mp3
 /home/hp/Music/JFla/[YT2mp3.info] - You Raise Me Up ( cover by J.Fla ) (320kbps).mp3
 /home/hp/Music/[YT2mp3.info] - __소녀__ (A Little Girl) by 오혁 (OH HYUK) Lyrics MV (320kbps).mp3
+/home/hp/Music/FLACs/Back In Black - AC_DC.flac
+/home/hp/Music/FLACs/Thunderstruck - AC_DC.flac
+/home/hp/Music/FLACs/Highway To Hell - AC_DC.flac
 /home/hp/Music/FLACs/Take On Me MTV Unplugged_ - A-ha.flac
 /home/hp/Music/FLACs/Nessun Dorma - Andrea Bocelli.flac
 /home/hp/Music/FLACs/La Vie En Rose - Andrea Bocelli- contain.flac
@@ -201,7 +204,6 @@
 /home/hp/Music/FLACs/Touch - Daft Punk_ Paul Williams.flac
 /home/hp/Music/Touch - Daft Punk_ Paul Williams.mp3
 /home/hp/Music/FLACs/Get Lucky - Daft Punk_ Pharrell Williams.flac
-/home/hp/Music/FLACs/Misirlou - Dick Dale_ His Del-Tones.flac
 /home/hp/Music/Minh Yeu Nhau Yeu Nhau Binh Ye... - Dinh Huong Ha Anh Tuan (NhacPro.net).mp3
 /home/hp/Music/FLACs/Freak - Doja Cat.flac
 /home/hp/Music/HotelCalifornia-Eagles_38w3_2.mp3
@@ -224,6 +226,7 @@
 /home/hp/Music/CantHelpFallingInLoveWithYou-HaleyReinhart-4160141.mp3
 /home/hp/Music/PostmodernJukebox/Habits - Haley Reinhart.mp3
 /home/hp/Music/Em Khong Quay Ve - Hoang Ton Yanbi.mp3
+/home/hp/Music/FLACs/Transylvania 2015 Remastered_ - Iron Mai.flac
 /home/hp/Music/FLACs/Lucky - Jason Mraz_ Colbie Caillat.flac
 /home/hp/Music/FLACs/Twenty-five_ twenty-one 25th - Jaurim.flac
 /home/hp/Music/Dung Nhu Thoi Quen - JayKii_ Sara Luu.mp3
@@ -232,6 +235,7 @@
 /home/hp/Music/FLACs/Day Night - Jung Seung Hwan.flac
 /home/hp/Music/FLACs/Stairway To Heaven - Led Zeppelin.flac
 /home/hp/Music/FLACs/Ngay Mai Em Di - Le Hieu_ Soobin Hoang S.flac
+/home/hp/Music/FLACs/Are You Gonna Go My Way - Lenny Kravitz.flac
 /home/hp/Music/FLACs/In The End - Linkin Park.flac
 /home/hp/Music/FLACs/The Catalyst - Linkin Park.flac
 /home/hp/Music/FLACs/When They Come For Me - Linkin Park.flac
@@ -250,6 +254,7 @@
 /home/hp/Music/FLACs/Can_t Hold Us - Macklemore_ Ray Dalton.flac
 /home/hp/Music/FLACs/Thrift Shop - Macklemore_ Wanz.flac
 /home/hp/Music/FLACs/Sick Enough To Die - MC Mong_ Mellow.flac
+/home/hp/Music/FLACs/Nothing Else Matters - Metallica.flac
 /home/hp/Music/FLACs/Billie Jean - Michael Jackson.flac
 /home/hp/Music/FLACs/Thriller - Michael Jackson.flac
 /home/hp/Music/Yeu Duoi - Nguyen Hoang Dung [MP3 320kbps].mp3
@@ -328,6 +333,7 @@
 /home/hp/Music/LetItBe-TheBeatles-37394.mp3
 /home/hp/Music/FLACs/Let It Be - The Beatles.flac
 /home/hp/Music/FLACs/Hotel California LIVE_ - The Eagles.flac
+/home/hp/Music/FLACs/Pretty Fly For A White Guy_ - The Offspr.flac
 /home/hp/Music/FLACs/I Can_t Get No_ Satisfaction - The Rolli.flac
 /home/hp/Music/FLACs/Seven Nation Army - The White Stripes.flac
 /home/hp/Music/FLACs/minh yeu nhau yeu nhau binh yen thoi - T.flac

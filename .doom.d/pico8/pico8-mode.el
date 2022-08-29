@@ -593,7 +593,7 @@ region."
   "pico8 major mode."
   (setq-local lua-font-lock-keywords (pico8--modified-lua-font-lock))
   (add-to-list 'xref-backend-functions #'xref-pico8-backend)
-  (add-to-list 'completion-at-point-functions #'pico8--completion-at-point)
+  ;; (add-to-list 'completion-at-point-functions #'pico8--completion-at-point)
   (setq-local eldoc-documentation-function #'pico8--eldoc-documentation)
   (setq-local syntax-propertize-function #'pico8--syntax-propertize)
   (when (pico8--has-documentation-p)
