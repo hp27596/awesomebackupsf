@@ -191,6 +191,7 @@
 /home/hp/Music/FLACs/When The Party_s Over - Billie Eilish.flac
 /home/hp/Music/FLACs/Bad Guy - Billie Eilish.flac
 /home/hp/Music/FLACs/all the good girls go to hell - Billie E.flac
+/home/hp/Music/FLACs/my strange addiction - Billie Eilish.flac
 /home/hp/Music/FLACs/ilomilo - Billie Eilish.flac
 /home/hp/Music/FLACs/02.-Everything I Wanted.flac
 /home/hp/Music/FLACs/14.-Idontwannabeyouanymore.flac
@@ -307,6 +308,8 @@
 /home/hp/Music/21. Who Wants To Live Forever.mp3
 /home/hp/Music/35. The Show Must Go On.mp3
 /home/hp/Music/UnderPressure-QueenDavidBowie-4704785.mp3
+/home/hp/Music/FLACs/Godfather - Romantic Guitar.flac
+/home/hp/Music/FLACs/The Sound Of Silence - Romantic Guitar.flac
 /home/hp/Music/FLACs/Clair De Lune - Sakata Tomoki.flac
 /home/hp/Music/AlwaysSomewhere-Scorpions_tc8.mp3
 /home/hp/Music/FLACs/08 - No Diggity (feat. Ariana Savalas).flac
@@ -336,6 +339,7 @@
 /home/hp/Music/FLACs/Pretty Fly For A White Guy_ - The Offspr.flac
 /home/hp/Music/FLACs/I Can_t Get No_ Satisfaction - The Rolli.flac
 /home/hp/Music/FLACs/Seven Nation Army - The White Stripes.flac
+/home/hp/Music/FLACs/The Plan - Travis Scott.flac
 /home/hp/Music/FLACs/minh yeu nhau yeu nhau binh yen thoi - T.flac
 /home/hp/Music/Linh Hồn Vẫn Tồn Tại-UnlimiteD.mp3
 /home/hp/Music/TaKillYaBabyDriverMix-VinnieManiscalco-5413629.mp3
