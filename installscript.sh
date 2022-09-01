@@ -49,7 +49,7 @@ yay -S interception-tools nextcloud-client ranger flameshot ncdu steam ardour fo
 
 
 # Install AUR packages
-yay -S caffeine-ng cava cmus-notify google-chrome material-black-colors-theme ncmatrix nerd-fonts-ubuntu-mono pyrit python-pulsectl ticker timeshift-bin noto-fonts-emoji-apple mangohud-git ttf-unifont ttf-font-awesome otf-font-awesome protonvpn goverlay ttf-ubuntu-font-family ttf-ms-fonts nuclear-player-bin routersploit-git update-grub grub-customizer colorpicker gnome-screensaver tlpui ttf-iosevka ueberzug xidlehook
+yay -S caffeine-ng cava cmus-notify google-chrome material-black-colors-theme ncmatrix nerd-fonts-ubuntu-mono pyrit python-pulsectl ticker timeshift-bin noto-fonts-emoji-apple mangohud-git ttf-unifont ttf-font-awesome otf-font-awesome protonvpn goverlay ttf-ubuntu-font-family ttf-ms-fonts nuclear-player-bin routersploit-git update-grub grub-customizer colorpicker gnome-screensaver tlpui ttf-iosevka ueberzug xidlehook  systemd-boot-pacman-hook
 
 # Post installation
 # refresh font cache
@@ -105,10 +105,10 @@ cargo install --git https://github.com/rschmukler/caffeinate
 sudo cp ~/.cargo/bin/caffeinate /usr/local/bin/
 
 # grub theme
-cd ~
-git clone --depth 1 https://gitlab.com/VandalByte/darkmatter-grub-theme.git && cd darkmatter-grub-theme
-sudo python3 darkmatter-theme.py --install
-cd ~
+# cd ~
+# git clone --depth 1 https://gitlab.com/VandalByte/darkmatter-grub-theme.git && cd darkmatter-grub-theme
+# sudo python3 darkmatter-theme.py --install
+# cd ~
 
 # change shell
 sudo chsh -s /usr/bin/zsh

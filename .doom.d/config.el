@@ -45,11 +45,14 @@
 ;; don't auto complete current sentence when enter
 (define-key evil-insert-state-map "\M-ENT" 'vertico-exit-input)
 ;; visual line navigation on arrow keys and normal lines on jk
-(define-key evil-normal-state-map [down] 'evil-next-visual-line)
-(define-key evil-normal-state-map [up] 'evil-previous-visual-line)
-
-
-
+;; (define-key evil-normal-state-map [down] 'evil-next-visual-line)
+;; (define-key evil-normal-state-map [up] 'evil-previous-visual-line)
+(define-key evil-normal-state-map [down] 'next-line)
+(define-key evil-normal-state-map [up] 'previous-line)
+(defun evil-next-five ()(interactive)(evil-next-line 5))
+(defun evil-prev-five ()(interactive)(evil-previous-line 5))
+(define-key evil-normal-state-map "\S-j" 'evil-next-five)
+(define-key evil-normal-state-map "\S-k" 'evil-prev-five)
 
 ;; Custom Functions/Keybinds
 ;; unset SPC SPC
