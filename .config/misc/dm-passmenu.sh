@@ -30,3 +30,5 @@ else
 	pass $pass_cmd "$password" | { IFS= read -r pass; printf %s "$pass"; } |
 		xdotool type --clearmodifiers --file -
 fi
+
+notify-send "$password" "Password copied to clipboard"
