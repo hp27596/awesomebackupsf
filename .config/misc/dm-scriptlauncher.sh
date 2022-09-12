@@ -4,8 +4,10 @@
 
 # declare scripts description and location
 declare -a options=(
+    "Set Cpu Profile - dm-cpu.sh"
     "Restart Emacs - resemacs.sh"
     "Restart Nextcloud Daemon - restartnextcloud.sh"
+    "Backup Awesome Dotfiles (Term) - awesomebu.sh"
     "Cpu turbo toggle - dm-turbo.sh"
     "Login Portal/Network Check - networkcheck.sh"
     "Kill Process - dm-killprocess.sh"
@@ -17,7 +19,6 @@ declare -a options=(
     "Connect to Network (Term) - nmtui.sh"
     "Switch Audio Source - dm-switchaudio.sh"
     "General Info (Term) - timescript.sh"
-    "Backup Awesome Dotfiles (Term) - awesomebu.sh"
     # "Backup Qtile Dotfiles (Term) - qtilebu.sh"
     "Open Password Manager - dm-passmenu.sh"
     "Open Clean Disk Utility (Term) - ncdu"
