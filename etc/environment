@@ -21,4 +21,3 @@ export GLFW_IM_MODULE=fcitx5
 
 VISUAL=/usr/bin/nvim
 EDITOR=/usr/bin/nvim
-MANGOHUD=1

@@ -186,8 +186,10 @@
 /home/hp/Music/FLACs/Halley_s Comet - Billie Eilish.flac
 /home/hp/Music/FLACs/Overheated - Billie Eilish.flac
 /home/hp/Music/FLACs/Happier Than Ever - Billie Eilish.flac
+/home/hp/Music/FLACs/Male Fantasy - Billie Eilish.flac
 /home/hp/Music/FLACs/My Future - Billie Eilish.flac
 /home/hp/Music/FLACs/NDA - Billie Eilish.flac
+/home/hp/Music/FLACs/Therefore I Am - Billie Eilish.flac
 /home/hp/Music/FLACs/When The Party_s Over - Billie Eilish.flac
 /home/hp/Music/FLACs/Bad Guy - Billie Eilish.flac
 /home/hp/Music/FLACs/all the good girls go to hell - Billie E.flac
@@ -220,6 +222,7 @@
 /home/hp/Music/FLACs/Where_d You Go - Fort Minor.flac
 /home/hp/Music/Whered You Go - Fort Minor [NCT 33634236251626562500].mp3
 /home/hp/Music/MyWay-FrankSinatra-3042173.mp3
+/home/hp/Music/FLACs/My Way - Frank Sinatra.flac
 /home/hp/Music/FLACs/Sweet Child O_ Mine - Guns N_ Roses.flac
 /home/hp/Music/Sweet Child O Mine - Guns N Roses (NhacPro.net).mp3
 /home/hp/Music/FLACs/What Is Love_ - Haddaway.flac
