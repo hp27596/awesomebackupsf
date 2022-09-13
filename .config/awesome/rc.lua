@@ -611,7 +611,7 @@ awful.rules.rules = {
           "pinentry",
           "veromix",
           "Xfce4-appfinder",
-          "Steam",
+          -- "Steam",
           "Onboard",
           "qutebrowser",
           "xtightvncviewer"},
