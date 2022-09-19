@@ -49,7 +49,7 @@ yay -S interception-tools nextcloud-client ranger flameshot ncdu steam ardour fo
 
 
 # Install AUR packages
-yay -S caffeine-ng cava cmus-notify google-chrome material-black-colors-theme ncmatrix nerd-fonts-ubuntu-mono pyrit python-pulsectl ticker timeshift-bin noto-fonts-emoji-apple mangohud-git ttf-unifont ttf-font-awesome otf-font-awesome protonvpn goverlay ttf-ubuntu-font-family ttf-ms-fonts nuclear-player-bin routersploit-git update-grub grub-customizer colorpicker gnome-screensaver tlpui ttf-iosevka ueberzug xidlehook  systemd-boot-pacman-hook
+yay -S caffeine-ng cava cmus-notify google-chrome material-black-colors-theme ncmatrix nerd-fonts-ubuntu-mono pyrit python-pulsectl ticker timeshift-bin noto-fonts-emoji-apple mangohud-git ttf-unifont ttf-font-awesome otf-font-awesome protonvpn goverlay ttf-ubuntu-font-family ttf-ms-fonts nuclear-player-bin routersploit-git update-grub grub-customizer colorpicker gnome-screensaver tlpui ttf-iosevka ueberzug xidlehook  systemd-boot-pacman-hook pass-update
 
 # Post installation
 # refresh font cache

@@ -181,20 +181,25 @@
 /home/hp/Music/FLACs/Bury A Friend - Billie Eilish.flac
 /home/hp/Music/FLACs/COPYCAT - Billie Eilish.flac
 /home/hp/Music/FLACs/Getting Older - Billie Eilish.flac
+/home/hp/Music/FLACs/I Didn_t Change My Number - Billie Eilis.flac
 /home/hp/Music/FLACs/Billie Bossa Nova - Billie Eilish.flac
 /home/hp/Music/FLACs/Oxytocin - Billie Eilish.flac
 /home/hp/Music/FLACs/Halley_s Comet - Billie Eilish.flac
 /home/hp/Music/FLACs/Overheated - Billie Eilish.flac
 /home/hp/Music/FLACs/Happier Than Ever - Billie Eilish.flac
 /home/hp/Music/FLACs/Male Fantasy - Billie Eilish.flac
+/home/hp/Music/FLACs/Lost Cause - Billie Eilish.flac
 /home/hp/Music/FLACs/My Future - Billie Eilish.flac
 /home/hp/Music/FLACs/NDA - Billie Eilish.flac
 /home/hp/Music/FLACs/Therefore I Am - Billie Eilish.flac
 /home/hp/Music/FLACs/When The Party_s Over - Billie Eilish.flac
 /home/hp/Music/FLACs/Bad Guy - Billie Eilish.flac
+/home/hp/Music/FLACs/you should see me in a crown - Billie Ei.flac
 /home/hp/Music/FLACs/all the good girls go to hell - Billie E.flac
+/home/hp/Music/FLACs/wish you were gay - Billie Eilish.flac
 /home/hp/Music/FLACs/my strange addiction - Billie Eilish.flac
 /home/hp/Music/FLACs/ilomilo - Billie Eilish.flac
+/home/hp/Music/FLACs/i love you - Billie Eilish.flac
 /home/hp/Music/FLACs/02.-Everything I Wanted.flac
 /home/hp/Music/FLACs/14.-Idontwannabeyouanymore.flac
 /home/hp/Music/It's My Life-Bon Jovi.mp3
@@ -259,6 +264,7 @@
 /home/hp/Music/FLACs/Thrift Shop - Macklemore_ Wanz.flac
 /home/hp/Music/FLACs/Sick Enough To Die - MC Mong_ Mellow.flac
 /home/hp/Music/FLACs/Nothing Else Matters - Metallica.flac
+/home/hp/Music/FLACs/Sway - Michael Buble.flac
 /home/hp/Music/FLACs/Billie Jean - Michael Jackson.flac
 /home/hp/Music/FLACs/Thriller - Michael Jackson.flac
 /home/hp/Music/Yeu Duoi - Nguyen Hoang Dung [MP3 320kbps].mp3
@@ -282,6 +288,7 @@
 /home/hp/Music/FLACs/04. Time.flac
 /home/hp/Music/FLACs/06. Money.flac
 /home/hp/Music/Back In Time Extended Version - Pitbull (NhacPro.net).mp3
+/home/hp/Music/FLACs/Where Is My Mind - Pixies.flac
 /home/hp/Music/PostmodernJukebox/Creep - Postmodern Jukebox.mp3
 /home/hp/Music/PostmodernJukebox/Seven Nation Army - Postmodern jukebox.mp3
 /home/hp/Music/AnotherOneBitesTheDustRemastered2011-Queen-5714922.mp3
@@ -311,6 +318,8 @@
 /home/hp/Music/21. Who Wants To Live Forever.mp3
 /home/hp/Music/35. The Show Must Go On.mp3
 /home/hp/Music/UnderPressure-QueenDavidBowie-4704785.mp3
+/home/hp/Music/FLACs/Creep - Radiohead.flac
+/home/hp/Music/FLACs/Only Girl In The World_ - Rihanna.flac
 /home/hp/Music/FLACs/Godfather - Romantic Guitar.flac
 /home/hp/Music/FLACs/The Sound Of Silence - Romantic Guitar.flac
 /home/hp/Music/FLACs/Clair De Lune - Sakata Tomoki.flac
@@ -329,6 +338,8 @@
 /home/hp/Music/FLACs/12 - Stressed Out.flac
 /home/hp/Music/FLACs/02 - Don't Stop Me Now (Feat. Melinda Doolittle).flac
 /home/hp/Music/FLACs/13 - Nothing Else Matters (feat. Caroline Baran).flac
+/home/hp/Music/FLACs/11 - idontwannabeyouanymore.flac
+/home/hp/Music/FLACs/03 - Mr. Blue Sky (feat. Allison Young).flac
 /home/hp/Music/FLACs/Cheap Thrills - Sia.flac
 /home/hp/Music/Coming Home Pt II - Skylar Grey.mp3
 /home/hp/Music/FLACs/Coming Home Part II_ - Skylar Grey.flac

@@ -4,6 +4,7 @@
 
 # declare scripts description and location
 declare -a options=(
+    "Touchpad Toggle - touchpadtoggle.sh"
     "Set Cpu Profile - dm-cpu.sh"
     "Restart Emacs - resemacs.sh"
     "Restart Nextcloud Daemon - restartnextcloud.sh"
