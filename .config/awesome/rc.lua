@@ -546,8 +546,11 @@ awful.rules.rules = {
     -- Set applications to always map on the tag 1 on screen 1.
     -- find class or role via xprop command
 
-    { rule_any = { class = { "Google-chrome" } } ,
+    { rule_any = { instance = { "google-chrome" } } ,
       properties = { tag = screen[1].tags[3] } },
+
+    { rule_any = { instance = { "crx_mhkgffchfoemiimeghigadnlaogjkica" } } ,
+      properties = { tag = screen[1].tags[4] } },
 
     { rule = { class = "Emacs" },
       properties = { tag = screen[1].tags[2] } },

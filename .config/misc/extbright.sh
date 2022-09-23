@@ -36,10 +36,10 @@ then
         then
             extended_brightness up
         else
-            brightnessctl s +10%
+            brightnessctl s +5%
         fi
     fi
-    notify-send -t 2000 "Brighness Up" "$(brightnessctl | grep Current | cut -c 2-)\nCurrent Extended brightness: $(xrandr --current --verbose | grep Brightness | cut -f2 -d " ")"
+    notify-send -t 2000 "Brightness Up" "$(brightnessctl | grep Current | cut -c 2-)\nCurrent Extended brightness: $(xrandr --current --verbose | grep Brightness | cut -f2 -d " ")"
 elif [[ "$1" == "down" ]]
 then
     if [[ $(echo "$CURR > 0" | bc) == 1 ]]
@@ -50,10 +50,10 @@ then
         then
             extended_brightness down
         else
-            brightnessctl s 10%-
+            brightnessctl s 5%-
         fi
     fi
-    notify-send -t 2000 "Brighness Down" "$(brightnessctl | grep Current | cut -c 2-)\nCurrent Extended brightness: $(xrandr --current --verbose | grep Brightness | cut -f2 -d " ")"
+    notify-send -t 2000 "Brightness Down" "$(brightnessctl | grep Current | cut -c 2-)\nCurrent Extended brightness: $(xrandr --current --verbose | grep Brightness | cut -f2 -d " ")"
 fi
 
 # echo "Extended brightness:" $(xrandr --current --verbose | grep Brightness | cut -f2 -d " ")

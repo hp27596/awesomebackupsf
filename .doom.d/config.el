@@ -79,7 +79,9 @@
       :n "M-K" #'+workspace/swap-right)
 
 (define-key evil-normal-state-map (kbd "M-k") '+workspace:switch-next)
+(define-key evil-insert-state-map (kbd "M-k") '+workspace:switch-next)
 (define-key evil-normal-state-map (kbd "M-j") '+workspace:switch-previous)
+(define-key evil-insert-state-map (kbd "M-j") '+workspace:switch-previous)
 (map! :after evil-org
       :map evil-org-mode-map
       :n "M-j" #'+workspace:switch-previous
