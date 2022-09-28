@@ -180,11 +180,16 @@
 /home/hp/Music/FLACs/Never Never Gonna Give You Up - Barry Wh.flac
 /home/hp/Music/FLACs/Bury A Friend - Billie Eilish.flac
 /home/hp/Music/FLACs/COPYCAT - Billie Eilish.flac
+/home/hp/Music/FLACs/Bellyache - Billie Eilish.flac
+/home/hp/Music/FLACs/Hostage - Billie Eilish.flac
+/home/hp/Music/FLACs/burn - Billie Eilish.flac
 /home/hp/Music/FLACs/Getting Older - Billie Eilish.flac
 /home/hp/Music/FLACs/I Didn_t Change My Number - Billie Eilis.flac
 /home/hp/Music/FLACs/Billie Bossa Nova - Billie Eilish.flac
 /home/hp/Music/FLACs/Oxytocin - Billie Eilish.flac
+/home/hp/Music/FLACs/Goldwing - Billie Eilish.flac
 /home/hp/Music/FLACs/Halley_s Comet - Billie Eilish.flac
+/home/hp/Music/FLACs/Not My Responsibility - Billie Eilish.flac
 /home/hp/Music/FLACs/Overheated - Billie Eilish.flac
 /home/hp/Music/FLACs/Happier Than Ever - Billie Eilish.flac
 /home/hp/Music/FLACs/Male Fantasy - Billie Eilish.flac
@@ -200,8 +205,18 @@
 /home/hp/Music/FLACs/my strange addiction - Billie Eilish.flac
 /home/hp/Music/FLACs/ilomilo - Billie Eilish.flac
 /home/hp/Music/FLACs/i love you - Billie Eilish.flac
+/home/hp/Music/FLACs/Billie Eilish - Six Feet Under.flac
+/home/hp/Music/FLACs/Billie Eilish - Bored.flac
+/home/hp/Music/FLACs/04. watch.flac
+/home/hp/Music/FLACs/Billie Eilish - bitches broken hearts.flac
+/home/hp/Music/FLACs/Billie Eilish - WHEN I WAS OLDER (Music Inspired By The Film ROMA).flac
+/home/hp/Music/FLACs/03. xanny.flac
+/home/hp/Music/FLACs/12. listen before i go.flac
 /home/hp/Music/FLACs/02.-Everything I Wanted.flac
 /home/hp/Music/FLACs/14.-Idontwannabeyouanymore.flac
+/home/hp/Music/FLACs/Billie Eilish - No Time To Die.flac
+/home/hp/Music/FLACs/11. Everybody Dies.flac
+/home/hp/Music/FLACs/12. Your Power.flac
 /home/hp/Music/It's My Life-Bon Jovi.mp3
 /home/hp/Music/FLACs/Criminal - Britney Spears.flac
 /home/hp/Music/FLACs/Toxic - Britney Spears.flac
@@ -234,6 +249,7 @@
 /home/hp/Music/can_t help falling in love - Haley Reinh.mp3
 /home/hp/Music/CantHelpFallingInLoveWithYou-HaleyReinhart-4160141.mp3
 /home/hp/Music/PostmodernJukebox/Habits - Haley Reinhart.mp3
+/home/hp/Music/FLACs/Why So Serious - Hans Zimmer.flac
 /home/hp/Music/Em Khong Quay Ve - Hoang Ton Yanbi.mp3
 /home/hp/Music/FLACs/Transylvania 2015 Remastered_ - Iron Mai.flac
 /home/hp/Music/FLACs/Lucky - Jason Mraz_ Colbie Caillat.flac

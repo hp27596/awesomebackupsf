@@ -255,8 +255,12 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "F10", function () awful.spawn.with_shell("playerctl next") end,
       {description = "Play Next", group = "hotkeys"}),
 
+    awful.key({ modkey }, "XF86AudioPrev", function () awful.spawn.with_shell("playerctl previous") end,
+      {description = "Play Previous", group = "hotkeys"}),
     awful.key({ }, "XF86AudioPlay", function () awful.spawn.with_shell("playerctl play-pause") end,
       {description = "Play/Pause", group = "hotkeys"}),
+    awful.key({ modkey }, "XF86AudioNext", function () awful.spawn.with_shell("playerctl next") end,
+      {description = "Play Next", group = "hotkeys"}),
 
     awful.key({ modkey }, "i", function () awful.spawn("clipmenu -i -l 15 -p 'Choose Clipboard:'") end,
         {description = "Clipboard manager", group = "hotkeys"}),
@@ -377,8 +381,11 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
         {description = "copy terminal to gtk", group = "hotkeys"}),
     -- Copy clipboard to primary (gtk to terminals)
-    awful.key({ modkey }, "v", function () awful.spawn.with_shell("xsel -b | xsel") end,
-        {description = "copy gtk to terminal", group = "hotkeys"})
+    -- awful.key({ modkey }, "v", function () awful.spawn.with_shell("xsel -b | xsel") end,
+    --     {description = "copy gtk to terminal", group = "hotkeys"})
+
+    awful.key({ modkey }, "v", function () awful.spawn.with_shell("pavucontrol") end,
+        {description = "Pulseaudio Volume Control", group = "hotkeys"})
 
     --]]
 )
@@ -534,7 +541,7 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
-                     placement = awful.placement.no_overlap+awful.placement.no_offscreen,
+                     placement = awful.placement.no_overlap+awful.placement.no_offscreen+awful.placement.centered,
                      size_hints_honor = false
      }
     },
@@ -608,13 +615,13 @@ awful.rules.rules = {
           "Peek",
           "Skype",
           "System-config-printer.py",
+          "Steam",
           -- "Sxiv",
           "Unetbootin.elf",
           "Wpa_gui",
           "pinentry",
           "veromix",
           "Xfce4-appfinder",
-          -- "Steam",
           "Onboard",
           "qutebrowser",
           "xtightvncviewer"},

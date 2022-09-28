@@ -277,8 +277,8 @@ temp = wibox.container.background(temp.widget, theme.bg_focus, gears.shape.recta
 
 
 -- Volume
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume') { widget_type = 'icon_and_text' }
-volume_widget = wibox.container.background(volume_widget, theme.bg_focus, gears.shape.rectangle)
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume') { widget_type = 'horizontal_bar' }
+-- volume_widget = wibox.container.background(volume_widget, theme.bg_focus, gears.shape.rectangle)
 
 -- Cmus
 -- local cmus_widget = require('awesome-wm-widgets.cmus-widget.cmus') { space = 5, timeout = 5 }
@@ -433,8 +433,8 @@ function theme.at_screen_connect(s)
             net_wireless,
             -- spr_small,
             bottom_bar,
-            volume_widget,
-            bottom_bar,
+            -- volume_widget,
+            -- bottom_bar,
             calendar_icon,
             calendarwidget,
             clock_icon,
