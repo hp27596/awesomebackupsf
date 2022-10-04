@@ -121,6 +121,7 @@ SAVEHIST=10000
 alias sudo='sudo ' #use aliases with sudo
 alias ls='ls --color=auto --group-directories-first'
 alias la='ls -a'
+alias lah='ls -lah'
 alias vim='nvim'
 alias cls='clear'
 alias mv='mv -i'
@@ -176,3 +177,5 @@ bindkey -M vicmd 'y' vi-yank-xclip
 bindkey "^R" history-incremental-search-backward
 
 setopt histignoredups
+unsetopt autocd #this is just a pain in the ass most of the time
+

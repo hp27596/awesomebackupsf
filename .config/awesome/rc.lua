@@ -294,10 +294,10 @@ globalkeys = my_table.join(
         {description = "Focus previous by index", group = "client"}),
 
     -- Non-empty tag browsing CTRL+TAB (CTRL+SHIFT+TAB)
-    awful.key({ altkey }, "Tab", function () lain.util.tag_view_nonempty(-1) end,
-              {description = "view  previous nonempty", group = "tag"}),
-    awful.key({ altkey, "Shift" }, "Tab", function () lain.util.tag_view_nonempty(1) end,
-              {description = "view  previous nonempty", group = "tag"}),
+    -- awful.key({ altkey }, "Tab", function () lain.util.tag_view_nonempty(-1) end,
+    --           {description = "view  previous nonempty", group = "tag"}),
+    -- awful.key({ altkey, "Shift" }, "Tab", function () lain.util.tag_view_nonempty(1) end,
+    --           {description = "view  previous nonempty", group = "tag"}),
 
     -- Default client focus
     awful.key({ modkey,         }, "k", function () awful.client.focus.byidx( 1) end,
@@ -557,10 +557,13 @@ awful.rules.rules = {
       properties = { tag = screen[1].tags[3] } },
 
     { rule_any = { instance = { "crx_mhkgffchfoemiimeghigadnlaogjkica" } } ,
-      properties = { tag = screen[1].tags[4] } },
+      properties = { tag = screen[1].tags[5] } },
 
     { rule = { class = "Emacs" },
       properties = { tag = screen[1].tags[2] } },
+
+    { rule = { class = "Virt-manager" },
+      properties = { tag = screen[1].tags[4] } },
 
     { rule_any = { class = { "Steam" } },
       properties = { tag = screen[1].tags[5] } },

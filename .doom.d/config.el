@@ -99,6 +99,12 @@
 ;; dired vim keys
 (evil-define-key 'normal dired-mode-map (kbd "h") 'dired-up-directory)
 (evil-define-key 'normal dired-mode-map (kbd "l") 'dired-find-file)
+;; jumps to next/prev headings
+(define-key evil-normal-state-map (kbd "M-]") 'outline-next-heading)
+(define-key evil-normal-state-map (kbd "M-[") 'outline-previous-heading)
+
+
+
 ;; Prompt for buffers to open after split
 (setq evil-vsplit-window-right t
       evil-split-window-below t)
