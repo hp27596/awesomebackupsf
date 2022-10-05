@@ -16,7 +16,8 @@ unsetopt autocd #this is just a pain in the ass most of the time
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+# ZSH_THEME="jovial"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -78,8 +79,16 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-# plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-vim-mode zsh-system-clipboard)
+plugins=(
+  git
+  # autojump
+  urltools
+  bgnotify
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  # zsh-history-enquirer
+  jovial
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -146,13 +155,7 @@ hack() { sudo airmon-ng start wlp1s0 && sudo wifite --dict /home/hp/passlist/top
 
 cdl() { cd "$@" && ls; }
 
-# uname -a
 pfetch
-# curl -m 5 "wttr.in/21.0292095,105.85247?format=Hanoi+-+%l+-+%T+|+Weather:+%C+|+Temp:+%t+|+Feels+Like:+%f+|+Humidity:+%h\n" 
-# echo -n "Local IPv4: " && ip addr show wlan0 | awk '$1 == "inet" {gsub(/\/.*$/, "", $2); print $2}'
-# echo -n "Public IPv4: " && curl -s -m 5 icanhazip.com
-# echo
-# fortune
 
 # [[ "$TERM" == "xterm-kitty" ]] && alias ssh="kitty +kitten ssh"
 
