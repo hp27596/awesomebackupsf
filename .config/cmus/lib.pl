@@ -169,6 +169,7 @@
 /home/hp/Music/FLACs/Thunderstruck - AC_DC.flac
 /home/hp/Music/FLACs/Highway To Hell - AC_DC.flac
 /home/hp/Music/FLACs/Take On Me MTV Unplugged_ - A-ha.flac
+/home/hp/Music/FLACs/I Will Go To You Like The First Snow - A.flac
 /home/hp/Music/FLACs/Nessun Dorma - Andrea Bocelli.flac
 /home/hp/Music/FLACs/La Vie En Rose - Andrea Bocelli- contain.flac
 /home/hp/Music/FLACs/01 - The Four Seasons Spring Concerto in E major, op. 8 no. 1, RV 269 I. Allegro - Mixed.flac
@@ -181,8 +182,11 @@
 /home/hp/Music/FLACs/Bury A Friend - Billie Eilish.flac
 /home/hp/Music/FLACs/COPYCAT - Billie Eilish.flac
 /home/hp/Music/FLACs/Bellyache - Billie Eilish.flac
+/home/hp/Music/FLACs/Ocean Eyes - Billie Eilish.flac
 /home/hp/Music/FLACs/Hostage - Billie Eilish.flac
 /home/hp/Music/FLACs/burn - Billie Eilish.flac
+/home/hp/Music/FLACs/TV - Billie Eilish.flac
+/home/hp/Music/FLACs/The 30th - Billie Eilish.flac
 /home/hp/Music/FLACs/Getting Older - Billie Eilish.flac
 /home/hp/Music/FLACs/I Didn_t Change My Number - Billie Eilis.flac
 /home/hp/Music/FLACs/Billie Bossa Nova - Billie Eilish.flac
@@ -206,17 +210,17 @@
 /home/hp/Music/FLACs/ilomilo - Billie Eilish.flac
 /home/hp/Music/FLACs/i love you - Billie Eilish.flac
 /home/hp/Music/FLACs/Billie Eilish - Six Feet Under.flac
-/home/hp/Music/FLACs/Billie Eilish - Bored.flac
+/home/hp/Music/FLACs/03. my boy.flac
+/home/hp/Music/FLACs/05. party favor.flac
 /home/hp/Music/FLACs/04. watch.flac
 /home/hp/Music/FLACs/Billie Eilish - bitches broken hearts.flac
+/home/hp/Music/FLACs/Billie Eilish - come out and play.flac
 /home/hp/Music/FLACs/Billie Eilish - WHEN I WAS OLDER (Music Inspired By The Film ROMA).flac
 /home/hp/Music/FLACs/03. xanny.flac
 /home/hp/Music/FLACs/12. listen before i go.flac
 /home/hp/Music/FLACs/02.-Everything I Wanted.flac
 /home/hp/Music/FLACs/14.-Idontwannabeyouanymore.flac
 /home/hp/Music/FLACs/Billie Eilish - No Time To Die.flac
-/home/hp/Music/FLACs/11. Everybody Dies.flac
-/home/hp/Music/FLACs/12. Your Power.flac
 /home/hp/Music/It's My Life-Bon Jovi.mp3
 /home/hp/Music/FLACs/Criminal - Britney Spears.flac
 /home/hp/Music/FLACs/Toxic - Britney Spears.flac
@@ -258,6 +262,7 @@
 /home/hp/Music/FLACs/Attention - J_Fla.flac
 /home/hp/Music/FLACs/Wake Me Up When September Ends - J_Fla.flac
 /home/hp/Music/FLACs/Day Night - Jung Seung Hwan.flac
+/home/hp/Music/FLACs/Hush - Lasse Lindh.flac
 /home/hp/Music/FLACs/Stairway To Heaven - Led Zeppelin.flac
 /home/hp/Music/FLACs/Ngay Mai Em Di - Le Hieu_ Soobin Hoang S.flac
 /home/hp/Music/FLACs/Are You Gonna Go My Way - Lenny Kravitz.flac
@@ -275,6 +280,7 @@
 /home/hp/Music/New Divine - Linkin Park.mp3
 /home/hp/Music/In The End - Linkin Park [NCT 32633888900113662500].mp3
 /home/hp/Music/The Catalyst - Linkin Park [NCT 20634165389887656250].mp3
+/home/hp/Music/FLACs/Hello - Lionel Richie_ Jennifer Nettles.flac
 /home/hp/Music/FLACs/Royals - Lorde.flac
 /home/hp/Music/FLACs/Can_t Hold Us - Macklemore_ Ray Dalton.flac
 /home/hp/Music/FLACs/Thrift Shop - Macklemore_ Wanz.flac
@@ -372,7 +378,10 @@
 /home/hp/Music/FLACs/The Plan - Travis Scott.flac
 /home/hp/Music/FLACs/minh yeu nhau yeu nhau binh yen thoi - T.flac
 /home/hp/Music/Linh Hồn Vẫn Tồn Tại-UnlimiteD.mp3
+/home/hp/Music/FLACs/Eun Tak_s Waltz - Various Artists.flac
+/home/hp/Music/FLACs/Amnesia - Various Artists.flac
 /home/hp/Music/TaKillYaBabyDriverMix-VinnieManiscalco-5413629.mp3
+/home/hp/Music/FLACs/I Will Always Love You - Whitney Houston.flac
 /home/hp/Music/FLACs/Scream And Shout - Will I Am_ Britney Sp.flac
 /home/hp/Music/ThuCuoi-Yanbi-MrT-HangBingBoong_3k5vk.mp3
 /home/hp/Music/FLACs/Thu Cuoi - Yanbi_ Mr_T_ Hang BingBoong.flac

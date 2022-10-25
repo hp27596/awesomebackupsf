@@ -2,11 +2,17 @@
 
 name=$(cmus-remote -Q | grep title | cut -d " " -f3-)
 
-if [ ${#name} -gt 30 ]
+if [ ${#name} -gt 23 ]
 then
-    name=$(printf '%.27s...\n' "$name")
+    name=$(printf '%.20s...\n' "$name")
 else
     name=$(printf '%s\n' "$name")
 fi
 
-echo "Now Playing:" "$name"
+status=$(cmus-remote -Q | grep status | awk '{print $2}')
+
+if [[ "$status" == "playing" ]]; then
+    echo " $name"
+else
+    echo " $name"
+fi

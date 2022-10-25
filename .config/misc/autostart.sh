@@ -27,7 +27,7 @@ touchegg &
 # onboard &
 # feh --bg-fill ~/.config/qtile/1099421.png
 # galaxybudsclient &
-volumeicon &
+# volumeicon &
 
 sleep 2
 alacritty &

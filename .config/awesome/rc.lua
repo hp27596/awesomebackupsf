@@ -86,7 +86,7 @@ awful.util.terminal = terminal
 awful.util.tagnames = {}
 local names = {"", "", "", "", "", "", "", "", ""}
 local l = awful.layout.suit  -- Just to save some typing: use an alias.
-local layouts = { l.tile, l.max, l.max, l.tile, l.max,
+local layouts = { l.tile, l.max, l.max, l.max, l.max,
     l.max, l.max, l.max, l.max }
 awful.tag(names, s, layouts)
 

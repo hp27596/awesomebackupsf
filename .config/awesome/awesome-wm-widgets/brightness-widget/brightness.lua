@@ -57,7 +57,7 @@ local function worker(user_args)
         inc_brightness_cmd = 'xbacklight -inc ' .. step
         dec_brightness_cmd = 'xbacklight -dec ' .. step
     elseif program == 'brightnessctl' then
-  	get_brightness_cmd = "brightnessctl get"
+        get_brightness_cmd = "brightnessctl get"
 		set_brightness_cmd = "brightnessctl set %d%%" -- <level>
 		inc_brightness_cmd = "brightnessctl set +" .. step .. "%"
 		dec_brightness_cmd = "brightnessctl set " .. step .. "-%"  
@@ -121,7 +121,7 @@ local function worker(user_args)
     end
 
     local update_widget = function(widget, stdout, _, _, _)
-        local brightness_level = tonumber(string.format("%.0f", stdout))
+        local brightness_level = string.format(" %.0f", tonumber(string.format("%.0f", stdout))/15) -- number 15 is a hack because my max brightness is 1500
         current_level = brightness_level
         widget:set_value(brightness_level)
     end

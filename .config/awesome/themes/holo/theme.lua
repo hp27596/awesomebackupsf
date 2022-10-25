@@ -1,7 +1,7 @@
 --[[
 
-     Holo Awesome WM theme 3.0
-     github.com/lcpz
+     Custom functional focused Awesome WM theme by Hp
+     github.com/hp27596
 
 --]]
 
@@ -37,7 +37,7 @@ theme.menu_width                                = dpi(160)
 theme.menu_icon_size                            = dpi(36)
 theme.cross = theme.icon_dir .. "/close.svg"
 theme.awesome_icon                              = theme.icon_dir .. "/awesome_icon_white.png"
-theme.awesome_icon_launcher                     = theme.icon_dir .. "/awesome_icon.png"
+theme.awesome_icon_launcher                     = theme.icon_dir .. "/arch.png"
 theme.taglist_squares_sel                       = theme.icon_dir .. "/square_sel.png"
 theme.taglist_squares_unsel                     = theme.icon_dir .. "/square_unsel.png"
 theme.spr_small                                 = theme.icon_dir .. "/spr_small.png"
@@ -46,7 +46,7 @@ theme.spr_right                                 = theme.icon_dir .. "/spr_right.
 theme.spr_bottom_right                          = theme.icon_dir .. "/spr_bottom_right.png"
 theme.spr_left                                  = theme.icon_dir .. "/spr_left.png"
 theme.bar                                       = theme.icon_dir .. "/bar.png"
-theme.bottom_bar                                = theme.icon_dir .. "/bottom_bar.png"
+-- theme.bottom_bar                                = theme.icon_dir .. "/bottom_bar.png"
 theme.mpdl                                      = theme.icon_dir .. "/mpd.png"
 theme.mpd_on                                    = theme.icon_dir .. "/mpd_on.png"
 theme.prev                                      = theme.icon_dir .. "/prev.png"
@@ -103,17 +103,18 @@ local blue   = "#80CCE6"
 local space3 = markup.font("Roboto 3", " ")
 
 -- Clock
-local mytextclock = wibox.widget.textclock(markup("#FFFFFF", space3 .. "%H:%M " .. markup.font("Roboto 4", " ")))
+local mytextclock = wibox.widget.textclock(markup("#FFFFFF", space3 .. "%H:%M" .. markup.font("Roboto 4", " ")))
 mytextclock.font = theme.font
-local clock_icon = wibox.widget.imagebox(theme.clock)
-local clockbg = wibox.container.background(mytextclock, theme.bg_focus, gears.shape.rectangle)
-local clockwidget = wibox.container.margin(clockbg, dpi(0), dpi(1), dpi(0), dpi(0))
+-- local clock_icon = wibox.widget.imagebox(theme.clock)
+-- local clockbg = wibox.container.background(mytextclock, theme.bg_focus, gears.shape.rectangle)
+-- local clockwidget = wibox.container.margin(clockbg, dpi(0), dpi(1), dpi(0), dpi(0))
+local clockwidget = wibox.container.margin(mytextclock, dpi(0), dpi(0), dpi(0), dpi(0))
 
 -- Calendar
-local mytextcalendar = wibox.widget.textclock(markup.fontfg(theme.font, "#FFFFFF", space3 .. "%d %b " .. markup.font("Roboto 5", " ")))
-local calendar_icon = wibox.widget.imagebox(theme.calendar)
-local calbg = wibox.container.background(mytextcalendar, theme.bg_focus, gears.shape.rectangle)
-local calendarwidget = wibox.container.margin(calbg, dpi(0), dpi(0), dpi(1), dpi(1))
+local mytextcalendar = wibox.widget.textclock(markup.fontfg(theme.font, "#FFFFFF", space3 .. "%a %d %b" .. markup.font("Roboto 5", " ")))
+-- local calbg = wibox.widget.imagebox(theme.calendar)
+-- local calbg = wibox.container.background(mytextcalendar, theme.bg_focus, gears.shape.rectangle)
+local calendarwidget = wibox.container.margin(mytextcalendar, dpi(0), dpi(0), dpi(1), dpi(1))
 theme.cal = lain.widget.cal({
     attach_to = { mytextclock, mytextcalendar },
     notification_preset = {
@@ -216,24 +217,7 @@ local bat = lain.widget.bat({
         widget:set_markup(markup.font("Roboto 8", bat_header) .. bat_p)
     end
 })
-bat = wibox.container.background(bat.widget, theme.bg_focus, gears.shape.rectangle)
-
-
--- ALSA volume bar
--- theme.volume = lain.widget.alsabar({
---     notification_preset = { font = "Monospace 9"},
---     --togglechannel = "IEC958,3",
---     width = dpi(80), height = dpi(10), border_width = dpi(0),
---     colors = {
---         background = "#383838",
---         unmute     = "#80CCE6",
---         mute       = "#FF9F9F"
---     },
--- })
--- theme.volume.bar.paddings = dpi(0)
--- theme.volume.bar.margins = dpi(5)
--- local volumewidget = wibox.container.background(theme.volume.bar, theme.bg_focus, gears.shape.rectangle)
--- volumewidget = wibox.container.margin(volumewidget, dpi(0), dpi(0), dpi(5), dpi(5))
+-- bat = wibox.container.background(bat.widget, theme.bg_focus, gears.shape.rectangle)
 
 -- CPU
 -- local cpu_icon = wibox.widget.imagebox(theme.cpu)
@@ -262,7 +246,7 @@ bat = wibox.container.background(bat.widget, theme.bg_focus, gears.shape.rectang
 local net_widgets = require("net_widgets")
 net_wireless = net_widgets.wireless({interface = "wlp1s0",
                                      onclick = "alacritty -e /home/hp/.config/misc/nmtui.sh"})
-net_wireless = wibox.container.background(net_wireless, theme.bg_focus, gears.shape.rectangle)
+-- net_wireless = wibox.container.background(net_wireless, theme.bg_focus, gears.shape.rectangle)
 
 
 -- Coretemp
@@ -270,43 +254,38 @@ local tempicon = wibox.widget.imagebox(theme.widget_temp)
 -- local tempfile = "/sys/devices/virtual/thermal/thermal_zone8/temp"
 local temp = lain.widget.temp({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.taglist_font, "#FFFFFF", " " .. coretemp_now .. "°C "))
+        widget:set_markup(markup.fontfg(theme.taglist_font, "#FFFFFF", " " .. coretemp_now .. "°C"))
     end
 })
-temp = wibox.container.background(temp.widget, theme.bg_focus, gears.shape.rectangle)
 
 
 -- Volume
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume') { widget_type = 'horizontal_bar' }
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume') { widget_type = 'icon_and_text' }
 -- volume_widget = wibox.container.background(volume_widget, theme.bg_focus, gears.shape.rectangle)
+
+-- Backlight
+local backlight_widget = require('awesome-wm-widgets.brightness-widget.brightness') { type = 'icon_and_text', program = 'brightnessctl', base = 70, tooltip = true, percentage = true, timeout = 10 }
 
 -- Cmus
 -- local cmus_widget = require('awesome-wm-widgets.cmus-widget.cmus') { space = 5, timeout = 5 }
 local cmus_widget = awful.widget.watch([[ bash -c '~/.config/awesome/cmus.sh' ]], 5, function(widget, stdout)  widget:set_markup(markup.font("Ubuntu Mono 9", stdout)) end )
-cmus_widget = wibox.container.margin(cmus_widget, dpi(0), dpi(0), dpi(3.5), dpi(0))
-cmus_widget = wibox.container.background(cmus_widget, theme.bg_focus, gears.shape.rectangle)
+cmus_widget = wibox.container.margin(cmus_widget, dpi(0), dpi(0), dpi(3), dpi(4))
+-- cmus_widget = wibox.container.background(cmus_widget, theme.bg_focus, gears.shape.rectangle)
 
 -- Weather
 -- local weather = awful.widget.watch([[ bash -c '~/.config/awesome/wttr.sh']], 300, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 9", stdout)) end )
 
-
-
 -- Launcher
-local mylauncher = awful.widget.button({ image = theme.awesome_icon_launcher })
+local mylauncher = awful.widget.button({ image = theme.awesome_icon_launcher, layout = wibox.layout.fixed.horizontal() })
+mylauncher = wibox.container.margin(mylauncher, dpi(5), dpi(5), dpi(5), dpi(5))
+mylauncher = wibox.container.background(mylauncher, theme.bg_focus, gears.shape.rectangle)
 mylauncher:connect_signal("button::press", function() awful.spawn.with_shell('panther_launcher') end )
--- mylauncher:connect_signal("button::press", function() awful.spawn.with_shell('xfce4-appfinder') end )
--- mylauncher:connect_signal("button::press", function() awful.util.mymainmenu:toggle() end )
-
--- Kill button
-local killbutton = awful.widget.button({ image = theme.cross })
-killbutton:connect_signal("button::press", function() client.focus:kill() end )
-killbutton = wibox.container.margin(killbutton, dpi(6), dpi(6), dpi(6), dpi(6))
-killbutton = wibox.container.background(killbutton, theme.bg_focus, gears.shape.rectangle)
 
 -- Caffeinate
 caffeine_widget, caffeine_timer = awful.widget.watch([[ bash -c '~/.config/awesome/caffe_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 20", stdout)) end )
 caffeine_widget:connect_signal("button::press", function() awful.spawn.with_shell('~/.config/awesome/caffe_toggle.sh') end )
-caffeine_widget = wibox.container.background(caffeine_widget, theme.bg_focus, gears.shape.rectangle)
+-- caffeine_widget = wibox.container.background(caffeine_widget, theme.bg_focus, gears.shape.rectangle)
+caffeine_widget = wibox.container.margin(caffeine_widget, dpi(0), dpi(10), dpi(0), dpi(0))
 
 -- rot8
 rot_widget, rot_timer = awful.widget.watch([[ bash -c '~/.config/awesome/rot_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 22", stdout)) end )
@@ -326,7 +305,7 @@ local spr_right = wibox.widget.imagebox(theme.spr_right)
 local spr_bottom_right = wibox.widget.imagebox(theme.spr_bottom_right)
 local spr_left = wibox.widget.imagebox(theme.spr_left)
 local bar = wibox.widget.imagebox(theme.bar)
-local bottom_bar = wibox.widget.imagebox(theme.bottom_bar)
+local vertbar = wibox.widget.textbox(' | ')
 
 local barcolor  = gears.color({
     type  = "linear",
@@ -366,22 +345,24 @@ function theme.at_screen_connect(s)
         filter = awful.widget.taglist.filter.all,
         buttons = awful.util.taglist_buttons,
         layout = {
-            spacing = 25,
+            spacing = 0,
             layout  = wibox.layout.fixed.vertical
         },
         style = {
             -- shape = gears.shape.powerline,
             bg_focus = barcolor,
-            font = 9,
-            spacing = 25,
+            font = 10,
+            spacing = 28,
         },
     }
 
-    mytaglistcont = wibox.container.background(s.mytaglist, theme.bg_focus, gears.shape.rectangle)
-    s.mytag = wibox.container.margin(mytaglistcont, dpi(3), dpi(0), dpi(2), dpi(0))
+    s.mytaglist = wibox.container.margin(s.mytaglist, dpi(2), dpi(0), dpi(5), dpi(10))
+    s.mytag = wibox.container.background(s.mytaglist, theme.bg_focus, gears.shape.rectangle)
+    -- s.mytag = wibox.container.margin(mytaglistcont, dpi(0), dpi(0), dpi(0), dpi(0))
 
+    local tasks = require('widget.task-list')
     -- Create a tasklist widget
-    s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons, { bg_focus = theme.bg_focus, shape = gears.shape.rectangle, shape_border_width = 5, shape_border_color = theme.tasklist_bg_normal, align = "center" })
+    -- s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, tasklistbuttons, { bg_focus = theme.bg_focus, shape = gears.shape.rectangle, shape_border_width = 5, shape_border_color = theme.tasklist_bg_normal, align = "center" })
 
     -- Create the left wibox
     s.mywibox = awful.wibar({ position = "left", screen = s , width = dpi(28) })
@@ -420,31 +401,29 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
         },
-        s.mytasklist, -- Middle widget
+        -- s.mytasklist, -- Middle widget
+        tasks(s),
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            killbutton,
-            bottom_bar,
             temp,
-            bottom_bar,
+            vertbar,
+            backlight_widget,
+            vertbar,
             bat,
-            bottom_bar,
-            -- bar,
+            vertbar,
             net_wireless,
-            -- spr_small,
-            bottom_bar,
-            -- volume_widget,
-            -- bottom_bar,
-            calendar_icon,
+            vertbar,
+            volume_widget,
+            vertbar,
+            -- calendar_icon,
             calendarwidget,
-            clock_icon,
+            vertbar,
+            -- clock_icon,
             clockwidget,
-            bottom_bar,
-            -- weather,
+            vertbar,
             cmus_widget,
-            bottom_bar,
+            vertbar,
             caffeine_widget,
-            bottom_bar,
         },
     }
 end

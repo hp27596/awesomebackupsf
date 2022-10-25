@@ -6,7 +6,7 @@
 :set softtabstop=4
 :set mouse=a
 :set linebreak
-:set so=5
+:set so=10
 :set clipboard=unnamed
 set number relativenumber
 " :set spell

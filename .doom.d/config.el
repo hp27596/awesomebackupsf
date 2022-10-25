@@ -2,8 +2,8 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
-(run-at-time (current-time) 600 'recentf-save-list)
-(run-at-time (current-time) 600 'bookmark-save)
+;; (run-at-time (current-time) 600 'recentf-save-list)
+;; (run-at-time (current-time) 600 'bookmark-save)
 
 ;; Better syntax highlighting with tree sitter
 (use-package! tree-sitter
@@ -18,6 +18,9 @@
 ;; (add-to-list 'completion-at-point-functions #'pico8--completion-at-point)
 (add-to-list 'auto-mode-alist '("\\.p8\\'" . pico8-mode))
 (add-hook 'pico8-mode-hook  (lambda () (setq evil-shift-width 1)(setq tab-width 1)(make-variable-buffer-local 'lua-indent-level)(set-variable 'lua-indent-level 1)(setq-local completion-at-point-functions #'pico8--completion-at-point)))
+
+;; ox-hugo
+(require 'ox-hugo)
 
 ;; (setq lua-indent-level 1)
 ;; (set-variable 'lua-indent-level 4)
@@ -78,6 +81,10 @@
       :n "M-J" #'+workspace/swap-left
       :n "M-K" #'+workspace/swap-right)
 
+;; sublimity bug work around
+;; (defun sublimsn()(+workspace:switch-next)(sublimity-map-show))
+;; (defun sublimsp()(+workspace:switch-previous)(sublimity-map-show))
+
 (define-key evil-normal-state-map (kbd "M-k") '+workspace:switch-next)
 (define-key evil-insert-state-map (kbd "M-k") '+workspace:switch-next)
 (define-key evil-normal-state-map (kbd "M-j") '+workspace:switch-previous)
@@ -104,6 +111,31 @@
 (define-key evil-normal-state-map (kbd "M-[") 'outline-previous-heading)
 
 
+;; ;; sublimity minimap.
+;; (require 'sublimity)
+;; (require 'sublimity-map)
+;; (require 'sublimity-attractive)
+;; ;; (require 'sublimity-scroll)
+;; (sublimity-map-set-delay nil)
+;; (sublimity-mode)
+;; ;; workaround to always show minimap
+;; (defun always-show-map ()(interactive)(add-hook 'post-command-hook #'sublimity-map-show))
+;; ;; workaround to show minimap, since I've exhausted all other options. The minimap package doesn't play well with org mode, and sublime minimap works with a bunch of caveats. package hasn't been updated in 2 years and it sucks, but what can you do. waiting for better minimap support on ORG mode
+;; (define-key evil-normal-state-map (kbd "M-1") #'(lambda ()(interactive)(+workspace/switch-to-0)(always-show-map)))
+
+;; failed tries. sits here for reference for a while
+;; (defadvice doom/load-session (after doom-load-session activate)(always-show-map))
+;; (defadvice doom/quickload-session (after doom-load-session activate)(always-show-map))
+;; (eval-after-load 'sublimity--post-command #'always-show-map)
+;; (add-hook 'sublimity-map-setup-hook #'visual-fill-column-mode)
+;; (defadvice +workspace/switch-to (after +workspace/switch-to-after activate)(run-hooks sublimity-mode-hook))
+;; (defadvice next-line (after next-line-after activate)(sublimity-map-show))
+;; (defadvice previous-line (after previous-line-after activate)(sublimity-map-show))
+;; (defadvice evil-next-line (after evil-next-line-after activate)(sublimity-map-show))
+;; (defadvice evil-previous-line (after evil-previous-line-after activate)(sublimity-map-show))
+;; (defadvice evil-forward-char (after evil-forward-char-after activate)(sublimity-map-show))
+;; (defadvice evil-backward-char (after evil-backward-char-after activate)(sublimity-map-show))
+
 
 ;; Prompt for buffers to open after split
 (setq evil-vsplit-window-right t
@@ -119,8 +151,17 @@
 ;;   (setq org-auto-tangle-default t))
 ;; full link instead of shortcut
 (setq org-descriptive-links nil)
+;; (add-hook 'org-mode-hook #'(org-indent-mode nil))
+;; (minimap-mode)
 ;; treemacs
 (setq treemacs-sorting 'alphabetic-case-insensitive-desc)
+(setq treemacs-width 25)
+;; (treemacs-follow-mode)
+(treemacs-tag-follow-mode)
+(defun ide-mode ()(interactive)(+treemacs/toggle)(demap-toggle)(evil-window-next nil))
+(global-set-key (kbd "<f8>") 'ide-mode)
+(global-set-key (kbd "<f6>") #'(lambda ()(interactive)(+treemacs/toggle)))
+(global-set-key (kbd "<f7>") 'demap-toggle)
 ;; dired
 (define-key dired-mode-map (kbd "M-i") 'dired-create-empty-file)
 ;; scroll margin
@@ -137,9 +178,9 @@
 ;; Custom Set Variables
 ;; Visual column mode in org documents
 (add-hook 'org-mode-hook #'visual-fill-column-mode)
-;; (global-visual-fill-column-mode t)
+(global-visual-fill-column-mode t)
 (setq-default visual-fill-column-center-text t)
-(setq-default fill-column 90)
+(setq-default fill-column 100)
 ;; beacon scrolling
 (beacon-mode 1)
 ;; buffer scroll bar on the right for easier navigation and knowing where in the document the cursor is
@@ -153,31 +194,31 @@
 
 
 
-;; org2blog mappings
-(map! :leader
-      :prefix "o"
-      :desc "org2blog-user-interface" "o" #'org2blog-user-interface)
+;; ;; org2blog mappings
+;; (map! :leader
+;;       :prefix "o"
+;;       :desc "org2blog-user-interface" "o" #'org2blog-user-interface)
 ;; org2blog setup
-(require 'org2blog)
-(add-hook 'org-mode-hook 'org2blog/wp-mode)
-(require 'auth-source)
-(defun org2blogcreds ()
-        (let*   ((creds (nth 0 (auth-source-search :host "blog")))
-                (url (plist-get creds :port))
-                (user (plist-get creds :user))
-                (pass (funcall (plist-get creds :secret)))
-                (config `(("blog"
-                        :url ,url
-                        :username ,user
-                        :password ,pass))))
-                (setq org2blog/wp-blog-alist config)))
-;; (org2blog-user-login)
-(defun org2blog-creds-and-login()(interactive)(org2blogcreds)(org2blog-user-login))
-(map! :leader
-      :prefix "o"
-      :desc "Org2blog creds and login" "4" #'org2blog-creds-and-login)
-(setq org-export-show-temporary-export-buffer nil)
-(setq org2blog/wp-image-upload t)
+;; (require 'org2blog)
+;; (add-hook 'org-mode-hook 'org2blog/wp-mode)
+;; (require 'auth-source)
+;; (defun org2blogcreds ()
+;;         (let*   ((creds (nth 0 (auth-source-search :host "blog")))
+;;                 (url (plist-get creds :port))
+;;                 (user (plist-get creds :user))
+;;                 (pass (funcall (plist-get creds :secret)))
+;;                 (config `(("blog"
+;;                         :url ,url
+;;                         :username ,user
+;;                         :password ,pass))))
+;;                 (setq org2blog/wp-blog-alist config)))
+;; ;; (org2blog-user-login)
+;; (defun org2blog-creds-and-login()(interactive)(org2blogcreds)(org2blog-user-login))
+;; (map! :leader
+;;       :prefix "o"
+;;       :desc "Org2blog creds and login" "4" #'org2blog-creds-and-login)
+;; (setq org-export-show-temporary-export-buffer nil)
+;; (setq org2blog/wp-image-upload t)
 
 ;; doom emacs dashboard setup
 (use-package dashboard
@@ -248,7 +289,7 @@
 
 (setq doom-font (font-spec :family "Source Code Pro" :size 24)
       doom-big-font (font-spec :family "Source Code Pro" :size 35)
-      doom-variable-pitch-font (font-spec :family "Source Code Pro" :size 24))
+      doom-variable-pitch-font (font-spec :family "Source Code Pro" :size 20))
 
 ;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
 ;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
