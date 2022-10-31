@@ -45,11 +45,11 @@ tlp-rdw
 #systemctl --user enable pulseaudio pulseaudio.socket
 
 # Install personal packages
-yay -S interception-tools nextcloud-client ranger flameshot ncdu steam ardour fortune-mod aircrack-ng bully reaver tmux libreoffice-fresh metasploit cowpatty wireshark-git termshark macchanger pixiewps john android-sdk-platform-tools nerd-fonts-jetbrains-mono krita xorg-fonts gucharmap qbittorrent rustscan cpupower-gui wine-staging bottom vlc tldr lutris fcitx5 fcitx5-gtk fcitx5-qt fcitx5-unikey kcm-fcitx5 btop clipmenu gparted pass pass-otp sxiv scrcpy qutebrowser trash-cli kdeconnect zathura zathura-pdf-mupdf easytag gnome-power-manager yt-dlp gthumb qalculate-gtk galculator hashcat shotwell
+yay -S interception-tools nextcloud-client ranger flameshot ncdu steam ardour fortune-mod aircrack-ng bully reaver tmux libreoffice-fresh metasploit cowpatty wireshark-qt termshark macchanger pixiewps john android-sdk-platform-tools nerd-fonts-jetbrains-mono krita xorg-fonts gucharmap qbittorrent rustscan cpupower-gui wine-staging bottom vlc tldr lutris fcitx5 fcitx5-gtk fcitx5-qt fcitx5-unikey kcm-fcitx5 btop clipmenu gparted pass pass-otp sxiv scrcpy qutebrowser trash-cli kdeconnect zathura zathura-pdf-mupdf easytag gnome-power-manager yt-dlp gthumb qalculate-gtk galculator hashcat shotwell kate bettercap
 
 
 # Install AUR packages
-yay -S caffeine-ng cava cmus-notify google-chrome material-black-colors-theme ncmatrix nerd-fonts-ubuntu-mono pyrit python-pulsectl ticker timeshift-bin noto-fonts-emoji-apple mangohud-git ttf-unifont ttf-font-awesome otf-font-awesome protonvpn goverlay ttf-ubuntu-font-family ttf-ms-fonts nuclear-player-bin routersploit-git update-grub grub-customizer colorpicker gnome-screensaver tlpui ttf-iosevka ueberzug xidlehook  systemd-boot-pacman-hook pass-update galaxybudsclient intel-opencl-runtime
+yay -S caffeine-ng cava cmus-notify google-chrome material-black-colors-theme ncmatrix nerd-fonts-ubuntu-mono pyrit python-pulsectl ticker timeshift-bin noto-fonts-emoji-apple mangohud-git ttf-unifont ttf-font-awesome otf-font-awesome protonvpn goverlay ttf-ubuntu-font-family ttf-ms-fonts nuclear-player-bin routersploit-git update-grub grub-customizer colorpicker gnome-screensaver tlpui ttf-iosevka ueberzug xidlehook systemd-boot-pacman-hook pass-update galaxybudsclient intel-opencl-runtime mdk3
 
 # Post installation
 # refresh font cache

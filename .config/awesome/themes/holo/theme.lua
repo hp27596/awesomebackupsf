@@ -71,6 +71,7 @@ theme.layout_max                                = theme.icon_dir .. "/max.png"
 theme.layout_fullscreen                         = theme.icon_dir .. "/fullscreen.png"
 theme.layout_magnifier                          = theme.icon_dir .. "/magnifier.png"
 theme.layout_floating                           = theme.icon_dir .. "/floating.png"
+theme.powerw                                    = theme.icon_dir .. "/power_w.svg"
 theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = true
 theme.useless_gap                               = dpi(3)
@@ -264,12 +265,13 @@ local volume_widget = require('awesome-wm-widgets.volume-widget.volume') { widge
 -- volume_widget = wibox.container.background(volume_widget, theme.bg_focus, gears.shape.rectangle)
 
 -- Backlight
-local backlight_widget = require('awesome-wm-widgets.brightness-widget.brightness') { type = 'icon_and_text', program = 'brightnessctl', base = 70, tooltip = true, percentage = true, timeout = 10 }
+local brightness_widget = require('awesome-wm-widgets.brightness-widget.brightness') { type = 'icon_and_text', program = 'brightnessctl', base = 70, tooltip = true, percentage = true, timeout = 100, step = 5 }
 
 -- Cmus
 -- local cmus_widget = require('awesome-wm-widgets.cmus-widget.cmus') { space = 5, timeout = 5 }
 local cmus_widget = awful.widget.watch([[ bash -c '~/.config/awesome/cmus.sh' ]], 5, function(widget, stdout)  widget:set_markup(markup.font("Ubuntu Mono 9", stdout)) end )
 cmus_widget = wibox.container.margin(cmus_widget, dpi(0), dpi(0), dpi(3), dpi(4))
+cmus_widget:connect_signal("button::press", function() awful.spawn.with_shell('cmus-remote -u') end )
 -- cmus_widget = wibox.container.background(cmus_widget, theme.bg_focus, gears.shape.rectangle)
 
 -- Weather
@@ -281,11 +283,15 @@ mylauncher = wibox.container.margin(mylauncher, dpi(5), dpi(5), dpi(5), dpi(5))
 mylauncher = wibox.container.background(mylauncher, theme.bg_focus, gears.shape.rectangle)
 mylauncher:connect_signal("button::press", function() awful.spawn.with_shell('panther_launcher') end )
 
+local lockbutton = awful.widget.button({ image = theme.powerw })
+lockbutton = wibox.container.margin(lockbutton, dpi(0), dpi(8), dpi(8), dpi(8))
+lockbutton:connect_signal("button::press", function() awful.spawn.with_shell('~/.config/misc/dm-logout.sh') end )
+
 -- Caffeinate
 caffeine_widget, caffeine_timer = awful.widget.watch([[ bash -c '~/.config/awesome/caffe_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 20", stdout)) end )
 caffeine_widget:connect_signal("button::press", function() awful.spawn.with_shell('~/.config/awesome/caffe_toggle.sh') end )
 -- caffeine_widget = wibox.container.background(caffeine_widget, theme.bg_focus, gears.shape.rectangle)
-caffeine_widget = wibox.container.margin(caffeine_widget, dpi(0), dpi(10), dpi(0), dpi(0))
+caffeine_widget = wibox.container.margin(caffeine_widget, dpi(0), dpi(0), dpi(0), dpi(0))
 
 -- rot8
 rot_widget, rot_timer = awful.widget.watch([[ bash -c '~/.config/awesome/rot_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 22", stdout)) end )
@@ -307,12 +313,12 @@ local spr_left = wibox.widget.imagebox(theme.spr_left)
 local bar = wibox.widget.imagebox(theme.bar)
 local vertbar = wibox.widget.textbox(' | ')
 
-local barcolor  = gears.color({
-    type  = "linear",
-    from  = { dpi(32), 0 },
-    to    = { dpi(32), dpi(32) },
-    stops = { {0, theme.bg_focus}, {0.25, "#505050"}, {1, theme.bg_focus} }
-})
+-- local barcolor  = gears.color({
+--     type  = "linear",
+--     from  = { dpi(32), 0 },
+--     to    = { dpi(32), dpi(32) },
+--     stops = { {0, theme.bg_focus}, {0.25, "#505050"}, {1, theme.bg_focus} }
+-- })
 
 function theme.at_screen_connect(s)
     -- Quake application
@@ -407,7 +413,7 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             temp,
             vertbar,
-            backlight_widget,
+            brightness_widget,
             vertbar,
             bat,
             vertbar,
@@ -424,6 +430,8 @@ function theme.at_screen_connect(s)
             cmus_widget,
             vertbar,
             caffeine_widget,
+            vertbar,
+            lockbutton,
         },
     }
 end

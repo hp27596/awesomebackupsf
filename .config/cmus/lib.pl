@@ -234,6 +234,7 @@
 /home/hp/Music/Minh Yeu Nhau Yeu Nhau Binh Ye... - Dinh Huong Ha Anh Tuan (NhacPro.net).mp3
 /home/hp/Music/FLACs/Freak - Doja Cat.flac
 /home/hp/Music/HotelCalifornia-Eagles_38w3_2.mp3
+/home/hp/Music/FLACs/Goodbye Yellow Brick Road - Elton John.flac
 /home/hp/Music/CantHelpFallinginLove-ElvisPresley-2902835.mp3
 /home/hp/Music/FLACs/Can_t Help Falling In Love - Elvis Presl.flac
 /home/hp/Music/FLACs/1 Walk On Water (feat. Beyoncé).flac

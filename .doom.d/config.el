@@ -155,7 +155,7 @@
 ;; (minimap-mode)
 ;; treemacs
 (setq treemacs-sorting 'alphabetic-case-insensitive-desc)
-(setq treemacs-width 25)
+(setq treemacs-width 30)
 ;; (treemacs-follow-mode)
 (treemacs-tag-follow-mode)
 (defun ide-mode ()(interactive)(+treemacs/toggle)(demap-toggle)(evil-window-next nil))

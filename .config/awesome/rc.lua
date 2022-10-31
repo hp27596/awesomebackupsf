@@ -10,6 +10,7 @@ local wibox         = require("wibox")
 
 -- Theme handling library
 local beautiful     = require("beautiful")
+local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
 
 -- Notification library
 local naughty       = require("naughty")
@@ -339,9 +340,19 @@ globalkeys = my_table.join(
         {description = "decrease master width factor", group = "layout"}),
 
     -- Brightness
-    awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn.with_shell("~/.config/misc/extbright.sh up &") end,
+    -- awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn.with_shell("~/.config/misc/extbright.sh up &") end,
+    awful.key({ }, "XF86MonBrightnessUp",
+        function ()
+            brightness_widget:inc()
+            naughty.notify({ title = "Brightness increased." })
+        end,
         {description = "+10%", group = "hotkeys"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn.with_shell("~/.config/misc/extbright.sh down &") end,
+    -- awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn.with_shell("~/.config/misc/extbright.sh down &") end,
+    awful.key({ }, "XF86MonBrightnessDown",
+        function ()
+            brightness_widget:dec()
+            naughty.notify({ title = "Brightness decreased." })
+        end,
         {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control
@@ -427,7 +438,11 @@ clientkeys = my_table.join(
       {description = "toggle floating", group = "client"}),
     awful.key({ modkey, ctrlkey }, "Return", function (c) c:swap(awful.client.getmaster()) end,
       {description = "move to master", group = "client"}),
-    awful.key({ modkey, "Shift" }, "t", function (c) c.ontop = not c.ontop end,
+    awful.key({ modkey, "Shift" }, "t",
+        function (c)
+            c.ontop = not c.ontop
+            naughty.notify({ title = "Sticky window toggled" })
+        end,
       {description = "toggle keep on top", group = "client"}),
     -- awful.key({ modkey,         }, "o", function (c) c:move_to_screen() end,
     --   {description = "move to screen", group = "client"}),
@@ -541,7 +556,7 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
-                     placement = awful.placement.no_overlap+awful.placement.no_offscreen+awful.placement.centered,
+                     placement = awful.placement.no_overlap+awful.placement.no_offscreen,
                      size_hints_honor = false
      }
     },
@@ -627,6 +642,7 @@ awful.rules.rules = {
           "Xfce4-appfinder",
           "Onboard",
           "qutebrowser",
+          "kate",
           "xtightvncviewer"},
 
         name = {

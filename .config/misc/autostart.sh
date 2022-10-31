@@ -28,6 +28,7 @@ touchegg &
 # feh --bg-fill ~/.config/qtile/1099421.png
 # galaxybudsclient &
 # volumeicon &
+nm-applet &
 
 sleep 2
 alacritty &
