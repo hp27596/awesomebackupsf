@@ -231,6 +231,8 @@
 /home/hp/Music/FLACs/Touch - Daft Punk_ Paul Williams.flac
 /home/hp/Music/Touch - Daft Punk_ Paul Williams.mp3
 /home/hp/Music/FLACs/Get Lucky - Daft Punk_ Pharrell Williams.flac
+/home/hp/Music/FLACs/Sandstorm - Darude.flac
+/home/hp/Music/FLACs/Strobe - Deadmau5.flac
 /home/hp/Music/Minh Yeu Nhau Yeu Nhau Binh Ye... - Dinh Huong Ha Anh Tuan (NhacPro.net).mp3
 /home/hp/Music/FLACs/Freak - Doja Cat.flac
 /home/hp/Music/HotelCalifornia-Eagles_38w3_2.mp3
@@ -372,7 +374,13 @@
 /home/hp/Music/FLACs/Yesterday - The Beatles.flac
 /home/hp/Music/LetItBe-TheBeatles-37394.mp3
 /home/hp/Music/FLACs/Let It Be - The Beatles.flac
+/home/hp/Music/FLACs/Hotel California - Eagles.flac
 /home/hp/Music/FLACs/Hotel California LIVE_ - The Eagles.flac
+/home/hp/Music/FLACs/Like A Boss - The Lonely Island.flac
+/home/hp/Music/FLACs/Spring Break Anthem - The Lonely Island.flac
+/home/hp/Music/FLACs/04 Turn Up the Beef (feat. Emma Ston.flac
+/home/hp/Music/FLACs/24 I'm a Weirdo.flac
+/home/hp/Music/FLACs/Semicolon - The Lonely Island_ Solange.flac
 /home/hp/Music/FLACs/Pretty Fly For A White Guy_ - The Offspr.flac
 /home/hp/Music/FLACs/I Can_t Get No_ Satisfaction - The Rolli.flac
 /home/hp/Music/FLACs/Seven Nation Army - The White Stripes.flac

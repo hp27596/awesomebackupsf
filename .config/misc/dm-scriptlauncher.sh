@@ -4,6 +4,7 @@
 
 # declare scripts description and location
 declare -a options=(
+    "Connect to Sony XM4 bluetooth headphone - sonyxm4.sh"
     "Touchpad Toggle - touchpadtoggle.sh"
     "Set Cpu Profile - dm-cpu.sh"
     "Restart Emacs - resemacs.sh"

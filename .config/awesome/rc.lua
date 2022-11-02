@@ -593,7 +593,7 @@ awful.rules.rules = {
       properties = { tag = screen[1].tags[7] } },
 
     { rule_any = { class = { "Thunar", "qBittorrent" } },
-      properties = { tag = screen[1].tags[7] } },
+      properties = { tag = screen[1].tags[8] } },
 
     { rule_any = { class = { "vlc" } },
       properties = { tag = screen[1].tags[9] } },
