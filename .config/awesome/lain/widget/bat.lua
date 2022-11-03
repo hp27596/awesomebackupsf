@@ -186,17 +186,17 @@ local function factory(args)
         -- notifications for critical, low, and full levels
         if notify == "on" then
             if bat_now.status == "Discharging" then
-                if tonumber(bat_now.perc) <= n_perc[1] then
-                    bat.id = naughty.notify({
-                        preset = bat_notification_critical_preset,
-                        replaces_id = bat.id
-                    }).id
-                elseif tonumber(bat_now.perc) <= n_perc[2] then
-                    bat.id = naughty.notify({
-                        preset = bat_notification_low_preset,
-                        replaces_id = bat.id
-                    }).id
-                end
+                -- if tonumber(bat_now.perc) <= n_perc[1] then
+                --     bat.id = naughty.notify({
+                --         preset = bat_notification_critical_preset,
+                --         replaces_id = bat.id
+                --     }).id
+                -- elseif tonumber(bat_now.perc) <= n_perc[2] then
+                --     bat.id = naughty.notify({
+                --         preset = bat_notification_low_preset,
+                --         replaces_id = bat.id
+                --     }).id
+                -- end
                 fullnotification = false
             elseif bat_now.status == "Full" and not fullnotification then
                 bat.id = naughty.notify({

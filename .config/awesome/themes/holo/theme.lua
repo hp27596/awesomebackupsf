@@ -407,8 +407,7 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
         },
-        -- s.mytasklist, -- Middle widget
-        tasks(s),
+        tasks(s), -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             temp,
