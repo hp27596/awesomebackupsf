@@ -154,6 +154,7 @@
 ;; (add-hook 'org-mode-hook #'(org-indent-mode nil))
 ;; (minimap-mode)
 ;; treemacs
+(+treemacs/toggle)
 (setq treemacs-sorting 'alphabetic-case-insensitive-desc)
 (setq treemacs-width 30)
 ;; (treemacs-follow-mode)
