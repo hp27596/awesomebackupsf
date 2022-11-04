@@ -49,7 +49,7 @@ yay -S interception-tools nextcloud-client flameshot ncdu steam ardour fortune-m
 
 
 # Install AUR packages
-yay -S caffeine-ng cava cmus-notify google-chrome material-black-colors-theme ncmatrix nerd-fonts-ubuntu-mono pyrit python-pulsectl ticker timeshift-bin noto-fonts-emoji-apple mangohud-git ttf-unifont ttf-font-awesome otf-font-awesome protonvpn goverlay ttf-ubuntu-font-family ttf-ms-fonts nuclear-player-bin routersploit-git update-grub grub-customizer colorpicker gnome-screensaver tlpui ttf-iosevka ueberzug xidlehook systemd-boot-pacman-hook pass-update galaxybudsclient intel-opencl-runtime mdk3 hashid pngcheck ranger-git 
+yay -S caffeine-ng cava cmus-notify google-chrome material-black-colors-theme ncmatrix pyrit python-pulsectl ticker timeshift-bin noto-fonts-emoji-apple mangohud-git ttf-unifont ttf-font-awesome otf-font-awesome protonvpn goverlay ttf-ubuntu-font-family ttf-ms-fonts nuclear-player-bin routersploit-git update-grub grub-customizer colorpicker gnome-screensaver tlpui ttf-iosevka ueberzug xidlehook systemd-boot-pacman-hook pass-update intel-opencl-runtime mdk3 hashid pngcheck ranger-git ttf-ubuntu-font-family
 
 # virt manager
 yay -S virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft bridge-utils openbsd-netcat
