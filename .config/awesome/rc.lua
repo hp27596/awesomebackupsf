@@ -578,7 +578,7 @@ awful.rules.rules = {
       properties = { tag = screen[1].tags[2] } },
 
     { rule = { class = "Virt-manager" },
-      properties = { tag = screen[1].tags[4] } },
+      properties = { tag = screen[1].tags[9] } },
 
     { rule_any = { class = { "Steam" } },
       properties = { tag = screen[1].tags[5] } },

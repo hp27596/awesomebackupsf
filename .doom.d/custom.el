@@ -7,7 +7,8 @@
  '(auth-source-gpg-encrypt-to '("4643772BF4BA0EAC43025C2CB4002554ECF5BF58"))
  '(auth-source-netrc-use-gpg-tokens '(t gpg))
  '(auth-sources '("/home/hp/.emacs.d/.local/etc/authinfo.gpg"))
- '(org-agenda-files '("/mnt/SDcard/Nextcloud/Emacs Notes/techtodo.org")))
+ '(org-agenda-files '("/mnt/SDcard/Nextcloud/Emacs Notes/techtodo.org"))
+ '(package-selected-packages '(org2blog)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
