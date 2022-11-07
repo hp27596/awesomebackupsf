@@ -49,14 +49,19 @@ yay -S interception-tools nextcloud-client flameshot ncdu steam ardour fortune-m
 
 
 # Install AUR packages
-yay -S caffeine-ng cava cmus-notify google-chrome material-black-colors-theme ncmatrix nerd-fonts-ubuntu-mono pyrit python-pulsectl ticker timeshift-bin noto-fonts-emoji-apple mangohud-git ttf-unifont ttf-font-awesome otf-font-awesome protonvpn goverlay ttf-ubuntu-font-family ttf-ms-fonts nuclear-player-bin routersploit-git update-grub grub-customizer colorpicker gnome-screensaver tlpui ttf-iosevka ueberzug xidlehook systemd-boot-pacman-hook pass-update galaxybudsclient intel-opencl-runtime mdk3 hashid pngcheck ranger-git 
+yay -S cava cmus-notify google-chrome material-black-colors-theme ncmatrix python-pulsectl ticker timeshift-bin noto-fonts-emoji-apple mangohud-git ttf-unifont ttf-font-awesome otf-font-awesome protonvpn goverlay ttf-ubuntu-font-family ttf-ms-fonts routersploit-git colorpicker tlpui ttf-iosevka ueberzug xidlehook systemd-boot-pacman-hook pass-update intel-opencl-runtime mdk3 hashid pngcheck ranger-git ttf-ubuntu-font-family
+
+# untested autoconfirm solution. used only when I'm sure about all the packages above. Needs testing
+# echo y | LANG=C yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm" $PKGNAMe
+
+# gnome-screensaver nuclear-player-bin
 
 # virt manager
 yay -S virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft bridge-utils openbsd-netcat
 sudo systemctl enable --now libvirtd
 sudo usermod -G libvirt -a $USER
-firewall-cmd --zone=libvirt --add-port=12345/tcp\
-sudo systemctl restart firewalld
+# sudo firewall-cmd --zone=libvirt --add-port=12345/tcp #open more ports from vm
+# sudo systemctl restart firewalld
 
 # Post installation
 # refresh font cache
@@ -68,6 +73,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
+# dark theme for qbittorrent
+wget https://github.com/dracula/qbittorrent/raw/master/qbittorrent.qbtheme
 
 # pip packages
 sudo pip install python-nmap
