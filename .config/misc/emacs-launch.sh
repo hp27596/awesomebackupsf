@@ -6,9 +6,9 @@ fi
 
 if [[ $(pgrep emacsclient) == '' ]]; then
     # \emacsclient -c -e '(dashboard-refresh-buffer)' &
-    \emacsclient -c &
+    nohup \emacsclient -c >&/dev/null &
 else
-    \emacsclient -e '(progn (+workspace/new)(find-file "'$@'"))' &
+    nohup \emacsclient -e '(progn (+workspace/new)(find-file "'$@'"))' >&/dev/null &
 fi
 
-# qtile cmd-obj -o group 2 -f toscreen
+echo 'local awful = require("awful") ; awful.screen.focused().tags[2]:view_only()' | awesome-client

@@ -196,30 +196,30 @@
 
 
 ;; ;; org2blog mappings
-;; (map! :leader
-;;       :prefix "o"
-;;       :desc "org2blog-user-interface" "o" #'org2blog-user-interface)
+(map! :leader
+      :prefix "o"
+      :desc "org2blog-user-interface" "o" #'org2blog-user-interface)
 ;; org2blog setup
-;; (require 'org2blog)
-;; (add-hook 'org-mode-hook 'org2blog/wp-mode)
-;; (require 'auth-source)
-;; (defun org2blogcreds ()
-;;         (let*   ((creds (nth 0 (auth-source-search :host "blog")))
-;;                 (url (plist-get creds :port))
-;;                 (user (plist-get creds :user))
-;;                 (pass (funcall (plist-get creds :secret)))
-;;                 (config `(("blog"
-;;                         :url ,url
-;;                         :username ,user
-;;                         :password ,pass))))
-;;                 (setq org2blog/wp-blog-alist config)))
-;; ;; (org2blog-user-login)
-;; (defun org2blog-creds-and-login()(interactive)(org2blogcreds)(org2blog-user-login))
-;; (map! :leader
-;;       :prefix "o"
-;;       :desc "Org2blog creds and login" "4" #'org2blog-creds-and-login)
-;; (setq org-export-show-temporary-export-buffer nil)
-;; (setq org2blog/wp-image-upload t)
+(require 'org2blog)
+(add-hook 'org-mode-hook 'org2blog/wp-mode)
+(require 'auth-source)
+(defun org2blogcreds ()
+        (let*   ((creds (nth 0 (auth-source-search :host "blog")))
+                (url (plist-get creds :port))
+                (user (plist-get creds :user))
+                (pass (funcall (plist-get creds :secret)))
+                (config `(("blog"
+                        :url ,url
+                        :username ,user
+                        :password ,pass))))
+                (setq org2blog/wp-blog-alist config)))
+;; (org2blog-user-login)
+(defun org2blog-creds-and-login()(interactive)(org2blogcreds)(org2blog-user-login))
+(map! :leader
+      :prefix "o"
+      :desc "Org2blog creds and login" "4" #'org2blog-creds-and-login)
+(setq org-export-show-temporary-export-buffer nil)
+(setq org2blog/wp-image-upload t)
 
 ;; doom emacs dashboard setup
 (use-package dashboard

@@ -313,12 +313,12 @@ local spr_left = wibox.widget.imagebox(theme.spr_left)
 local bar = wibox.widget.imagebox(theme.bar)
 local vertbar = wibox.widget.textbox(' | ')
 
--- local barcolor  = gears.color({
---     type  = "linear",
---     from  = { dpi(32), 0 },
---     to    = { dpi(32), dpi(32) },
---     stops = { {0, theme.bg_focus}, {0.25, "#505050"}, {1, theme.bg_focus} }
--- })
+local barcolor  = gears.color({
+    type  = "linear",
+    from  = { dpi(32), 0 },
+    to    = { dpi(32), dpi(32) },
+    stops = { {0, theme.bg_focus}, {0.25, "#505050"}, {1, theme.bg_focus} }
+})
 
 function theme.at_screen_connect(s)
     -- Quake application
