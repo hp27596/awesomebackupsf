@@ -13,14 +13,14 @@
   (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
 
 ;; pico8
-(add-to-list 'load-path "~/.doom.d/pico8/")
-(require 'pico8-mode)
-;; (add-to-list 'completion-at-point-functions #'pico8--completion-at-point)
-(add-to-list 'auto-mode-alist '("\\.p8\\'" . pico8-mode))
-(add-hook 'pico8-mode-hook  (lambda () (setq evil-shift-width 1)(setq tab-width 1)(make-variable-buffer-local 'lua-indent-level)(set-variable 'lua-indent-level 1)(setq-local completion-at-point-functions #'pico8--completion-at-point)))
+;; (add-to-list 'load-path "~/.doom.d/pico8/")
+;; (require 'pico8-mode)
+;; ;; (add-to-list 'completion-at-point-functions #'pico8--completion-at-point)
+;; (add-to-list 'auto-mode-alist '("\\.p8\\'" . pico8-mode))
+;; (add-hook 'pico8-mode-hook  (lambda () (setq evil-shift-width 1)(setq tab-width 1)(make-variable-buffer-local 'lua-indent-level)(set-variable 'lua-indent-level 1)(setq-local completion-at-point-functions #'pico8--completion-at-point)))
 
 ;; ox-hugo
-(require 'ox-hugo)
+;; (require 'ox-hugo)
 
 ;; (setq lua-indent-level 1)
 ;; (set-variable 'lua-indent-level 4)
@@ -192,17 +192,11 @@
 ;; Set Vterm defaultl shell
 (setq vterm-shell '/usr/bin/zsh)
 
-
-
-
-;; ;; org2blog mappings
-(map! :leader
-      :prefix "o"
-      :desc "org2blog-user-interface" "o" #'org2blog-user-interface)
 ;; org2blog setup
 (require 'org2blog)
 (add-hook 'org-mode-hook 'org2blog/wp-mode)
 (require 'auth-source)
+(setq auth-sources '("~/.emacs.d/.local/etc/authinfo.gpg"))
 (defun org2blogcreds ()
         (let*   ((creds (nth 0 (auth-source-search :host "blog")))
                 (url (plist-get creds :port))
@@ -220,6 +214,10 @@
       :desc "Org2blog creds and login" "4" #'org2blog-creds-and-login)
 (setq org-export-show-temporary-export-buffer nil)
 (setq org2blog/wp-image-upload t)
+;; ;; org2blog mappings
+(map! :leader
+      :prefix "o"
+      :desc "org2blog-user-interface" "o" #'org2blog-user-interface)
 
 ;; doom emacs dashboard setup
 (use-package dashboard
