@@ -735,7 +735,8 @@ end)
 -- No border and gaps for maximized clients
 function border_adjust(c)
     local max = mouse.screen.selected_tag.layout.name == "max"
-    if (max or c.maximized) then -- no borders if only 1 client visible
+    local is_single = #mouse.screen.selected_tag:clients() == 1
+    if (max or c.maximized or is_single) then -- no borders if only 1 client visible
         c.border_width = 0
     elseif #awful.screen.focused().clients > 1 then
         c.border_width = beautiful.border_width

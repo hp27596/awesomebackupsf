@@ -119,8 +119,8 @@ local function list_update(w, buttons, label, data, objects)
     else
       -- truncate when title is too long
       local textOnly = text:match('>(.-)<')
-      if (textOnly:len() > 24) then
-        text = text:gsub('>(.-)<', '>' .. textOnly:sub(1, 21) .. '...<')
+      if (textOnly:len() > 28) then
+        text = text:gsub('>(.-)<', '>' .. textOnly:sub(1, 25) .. '...<')
         tt:set_text(textOnly)
         tt:add_to_object(tb)
       else
@@ -146,10 +146,10 @@ local function list_update(w, buttons, label, data, objects)
     bgb.shape_border_width = args.shape_border_width
     bgb.shape_border_color = args.shape_border_color
 
-    bgb = wibox.container.margin(bgb, dpi(3), dpi(3), dpi(2), dpi(2), "#242424")
+    bgb = wibox.container.margin(bgb, dpi(3), dpi(1), dpi(2), dpi(2), "#242424")
 
     w:add(bgb)
-    w:set_max_widget_size(dpi(180))
+    w:set_max_widget_size(dpi(175))
   end
 end
 local tasklist_buttons =
