@@ -209,8 +209,11 @@ globalkeys = my_table.join(
               {description = "Reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift" }, "q",  function () awful.spawn.with_shell("dm-logout") end,
               {description = "Quit awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift" }, "p",      hotkeys_popup.show_help,
-        {description = "Show help", group="awesome"}),
+    -- awful.key({ modkey, "Shift" }, "p",      hotkeys_popup.show_help,
+    --     {description = "Show help", group="awesome"}),
+
+    awful.key({ modkey, "Shift" }, "p", function() awful.spawn.with_shell('cp=$(colorpicker --one-shot) && notify-send "Color:" "$cp" && ( echo -n "$cp" | grep -oE "[^ ]+$" | xclip -sel clip)') end,
+        {description = "Colorpicker", group = "awesome"}),
 
     awful.key({ modkey, "Shift" }, "w", function () awful.util.mymainmenu:show() end,
         {description = "Show main menu", group = "awesome"}),

@@ -52,13 +52,13 @@ local function list_update(w, buttons, label, data, objects)
     else
       ib = wibox.widget.imagebox()
       tb = wibox.widget.textbox()
-      cb =
-        clickable_container(
+      cb = clickable_container(
         wibox.container.margin(
-          wibox.widget.imagebox(os.getenv('HOME') .. '/.config/awesome/themes/holo/icons/close.svg')        )
+          wibox.widget.imagebox(os.getenv('HOME') .. '/.config/awesome/themes/holo/icons/close.svg')
+        )
       )
       cb.shape = gears.shape.circle
-      cbm = wibox.container.margin(cb, dpi(4), dpi(8), dpi(8), dpi(11))
+      cbm = wibox.container.margin(cb, dpi(4), dpi(4), dpi(7), dpi(7))
       cbm:buttons(
         gears.table.join(
           awful.button(
@@ -76,14 +76,15 @@ local function list_update(w, buttons, label, data, objects)
       tbm = wibox.container.margin(tb, dpi(4), dpi(4))
       ibm = wibox.container.margin(ib, dpi(12), dpi(12), dpi(12), dpi(12))
       l = wibox.layout.fixed.horizontal()
-      ll = wibox.layout.fixed.horizontal()
+      ll = wibox.layout.align.horizontal()
 
       -- All of this is added in a fixed widget
       l:fill_space(true)
       l:add(ibm)
       l:add(tbm)
-      ll:add(l)
-      ll:add(cbm)
+      ll:set_middle(l)
+      ll:set_right(cbm)
+
 
       bg_clickable:set_widget(ll)
       -- And all of this gets a background
@@ -145,7 +146,10 @@ local function list_update(w, buttons, label, data, objects)
     bgb.shape_border_width = args.shape_border_width
     bgb.shape_border_color = args.shape_border_color
 
+    bgb = wibox.container.margin(bgb, dpi(3), dpi(3), dpi(2), dpi(2), "#242424")
+
     w:add(bgb)
+    w:set_max_widget_size(dpi(180))
   end
 end
 local tasklist_buttons =
@@ -200,7 +204,7 @@ local TaskList = function(s)
     tasklist_buttons,
     {},
     list_update,
-    wibox.layout.fixed.horizontal()
+    wibox.layout.flex.horizontal()
   )
 end
 
